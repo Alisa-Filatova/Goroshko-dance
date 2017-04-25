@@ -1,0 +1,107 @@
+@import '../variables';
+
+.table {
+    background-color: @grey;
+    text-transform: uppercase;
+    color: #757575;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 110px;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+
+    & tr {
+
+        &:nth-child(even) {
+            background-color: @grey_dark;
+        }
+    }
+
+
+    &__heading {
+        color: @white;
+        font-weight: 400;
+        width: 226px;
+        border-right: 20px solid @white;
+        border-left: 2px solid @white;
+        padding-top: 20px;
+        padding-bottom: 15px;
+
+        &_logo {
+            width: 290px;
+        }
+
+        &_day,
+        &_place {
+            background-color: @pink;
+        }
+
+        &_time,
+        &_age {
+            background-color: @purple;
+        }
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    &__cell {
+        border-right: 20px solid @white;
+        border-left: 2px solid @white;
+        padding: 8px 10px;
+    }
+
+    &__icon {
+        width: 65px;
+        height: 56px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &_calendar {
+            background-image: url('../img/calendar.svg');
+        }
+
+        &_time {
+           background-image: url('../img/time.svg');
+        }
+
+        &_marker {
+           background-image: url('../img/marker.svg');
+        }
+
+        &_people {
+            background-image: url('../img/people.svg');
+        }
+    }
+
+    &__correction {
+        color: #757575;
+        font-size: 16px;
+        word-spacing: 4px;
+
+        &_attention {
+            color: @pink;
+            font-weight: 700;
+        }
+    }
+
+    &::before {
+        content: '*';
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: -35px;
+        font-size: 120px;
+        font-weight: 700;
+        color: @pink;
+    }
+}

@@ -1,0 +1,61 @@
+@import 'fonts';
+@import 'variables';
+
+body {
+    position: relative;
+    max-width: @screen_desktop;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 31px;
+    color: #110a0a;
+    background-color: @grey;
+    text-align: left;
+    margin: auto;
+
+    @media (max-width: @screen_tablet) {
+        min-width: @screen_tablet;
+    }
+
+    @media (max-width: @screen_mobile) {
+        min-width: @screen_mobile;
+    }
+}
+
+.page-heading {
+    font-family: 'PT Serif', 'Times New Roman', serif;
+    font-size: 44px;
+    line-height: 61px;
+    color: @white;
+    font-weight: 400;
+    margin: 0;
+}
+
+.base-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: @pink;
+
+    &:hover {
+        opacity: 0.7;
+        transition: 0.2s;
+    }
+
+     &:active {
+       color: @black;
+       opacity: 0.8;
+    }
+
+    &:focus {
+        color: @black;
+    }
+
+    &:visited {
+        color: @purple;
+        font-weight: 400;
+        opacity: 0.5;
+    }
+}
+
+
+

@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.btn {
+    display: inline-block;
+    background-color: @pink;
+    color: @white;
+    text-transform: uppercase;
+    padding: 11px 40px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: @pink_dark;
+        transition: 0.3s;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:active {
+        background-color: @pink_dark;
+        color: rgba(255, 255, 255, 0.2);
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../variables';
+
+.paginator {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+
+    &__item {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid @purple;
+        opacity: 0.8;
+        cursor: pointer;
+        margin-bottom: 15px;
+
+        &_active {
+           background-color: @pink;
+        }
+    }
+}

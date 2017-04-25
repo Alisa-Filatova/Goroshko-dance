@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.input-text {
+
+    border: none;
+    border-radius: 3px;
+    width: 239px;
+    outline: none;
+    background-color: @grey;
+    border: 2px solid @grey_dark;
+
+    &:hover {
+       background-color: @grey_dark;
+    }
+
+    &:active {
+       border: 2px solid @purple;
+    }
+
+    &:focus {
+       border: 2px solid @pink;
+    }
+}
