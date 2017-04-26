@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.close-cross {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    display: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 4px;
+        background-color: @purple;
+        position: absolute;
+        top: 9px;
+        left: 2px;
+        transform: rotate(41deg);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 4px;
+        background-color: @purple;
+        position: absolute;
+        top: 9px;
+        left: 2px;
+        transform: rotate(137deg);
+    }
+}

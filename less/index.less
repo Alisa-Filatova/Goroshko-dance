@@ -6,6 +6,7 @@
 @import 'components/controls/btn';
 @import 'components/timetable';
 @import 'components/modal-post-form';
+@import 'components/map';
 @import 'animation';
 
 
@@ -29,9 +30,10 @@
     }
 }
 
-.page-header {
 
-    @media(max-width:@screen_tablet) {
+@media(max-width:@screen_tablet) {
+
+    .page-header {
         padding-bottom: 130px;
 
         &__logo {
@@ -131,6 +133,47 @@
         &__items {
             flex-flow: column wrap;
             transform: rotate(0);
+            width: 100%;
+            z-index: 2000;
+            align-items: flex-end;
+            display: none;
+        }
+
+        &__items_show {
+            display: flex;
+            animation: slide-in-left 1s ease;
+        }
+
+        &__item {
+            margin-bottom: 0;
+            display: flex;
+        }
+
+        &__link {
+            background-color: @pink;
+            font-size: 27px;
+            text-align: center;
+            width: 158px;
+            border-bottom: 2px solid @pink_dark;
+            padding: 29px 70px;
+        }
+
+        &__menu-open {
+            display: block;
+            z-index: 1500;
+            background-color: @pink;
+            position: absolute;
+            width: 60px;
+            height: 38px;
+            top: 15px;
+            right: 52px;
+            border: none;
+            background-image: url('../img/menu.min.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 93%;
+            animation: fade-in ease-in;
+            animation-duration: 1s;
         }
     }
 }
@@ -171,6 +214,15 @@
 
         &:active {
             opacity: 0.4;
+        }
+    }
+}
+
+@media(max-width:@screen_tablet) {
+
+    .social-item {
+        &__link {
+            opacity: 0.8;
         }
     }
 }
@@ -234,6 +286,41 @@
         left: 544px;
         animation: fade-in-down;
         animation-duration: 1.5s;
+    }
+}
+
+@media(max-width:@screen_tablet) {
+    .promo {
+        padding-top: 65px;
+        padding-bottom: 0;
+        background-position-x: 93%;
+        background-position-y: 28%;
+        background-size: 45%;
+
+        &__title {
+            font-size: 34px;
+            line-height: 51px;
+        }
+
+        &__wrapper {
+            margin-left: 0;
+        }
+
+        &__description {
+            font-size: 19px;
+        }
+
+        &::after {
+            width: 150px;
+            height: 106px;
+        }
+
+        &::before {
+            width: 150px;
+            height: 112px;
+            bottom: -61px;
+            left: 593px;
+        }
     }
 }
 
@@ -306,6 +393,33 @@
     }
 }
 
+@media(max-width:@screen_tablet) {
+    .about-me {
+        padding-top: 11px;
+
+        &__photo {
+            width: 350px;
+            height: 450px;
+            order: 2;
+            border-radius: 0;
+            margin-right: -58px;
+        }
+
+        &__wrapper {
+            flex-flow: row nowrap;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-image: linear-gradient(to right, transparent 0%, #f2f2f2 39%);
+        }
+
+        &__description {
+            max-width: 609px;
+            margin-left: -44px;
+            margin-right: 0;
+        }
+    }
+}
+
 .directions {
     .container();
     background-color: @white;
@@ -328,6 +442,23 @@
         justify-content: center;
         align-items: center;
         margin-right: 46px;
+    }
+}
+
+@media(max-width:@screen_tablet) {
+
+    .directions {
+        padding-top: 6px;
+
+        &__heading {
+            transform: rotate(-3deg);
+            margin-left: -40px;
+        }
+
+        &__wrapper {
+            margin-top: 54px;
+            margin-right: 0;
+        }
     }
 }
 
@@ -432,6 +563,38 @@
     }
 }
 
+@media(max-width:@screen_tablet) {
+
+    .direction-item {
+        padding-top: 36px;
+        padding-bottom: 36px;
+        background-image: linear-gradient(to right, transparent 12%, @grey 12%);
+
+        &__photo {
+            width: 185px;
+            height: 185px;
+            margin-left: -18px;
+        }
+
+        &::after {
+            width: 148px;
+            height: 345px;
+            left: -56px;
+            top: -3px;
+        }
+
+        &__btn {
+            padding: 11px 89px;
+            right: -173px;
+            top: 119px;
+        }
+
+        &__description {
+            max-width: 488px;
+        }
+    }
+}
+
 .video {
     .container();
     background-color: @white;
@@ -506,6 +669,17 @@
     }
 }
 
+@media(max-width:@screen_tablet) {
+    .video {
+        padding-top: 0;
+        padding-bottom: 7px;
+
+        &__links {
+            margin-top: 20px;
+        }
+    }
+}
+
 .timetable {
     .container();
     background-color: @white;
@@ -518,6 +692,16 @@
 
     &__heading {
         transform: rotate(-3deg);
+    }
+}
+
+@media(max-width:@screen_tablet) {
+    .timetable {
+        padding-top: 4px;
+
+        &__heading {
+            transform: rotate(-4px);
+        }
     }
 }
 
@@ -549,12 +733,27 @@
     }
 
     &__item {
-        margin-bottom: 34px;
+        margin-bottom: 33px;
         margin-top: 0;
     }
 
     &__link {
         font-weight: 400;
+    }
+}
+
+@media(max-width:@screen_tablet) {
+    .contacts {
+        padding-top: 2px;
+        padding-bottom: 0;
+
+        &__wrapper {
+            margin-top: 53px;
+        }
+
+        &__items {
+            max-width: 320px;
+        }
     }
 }
 
@@ -605,6 +804,12 @@
         flex-flow: row nowrap;
         list-style: none;
         padding: 0;
+    }
+}
+
+@media(max-width:@screen_tablet) {
+    .footer {
+        padding-top: 34px;
     }
 }
 
@@ -676,6 +881,20 @@
     }
 }
 
+@media(max-width:@screen_tablet) {
+    .footer-nav {
+        justify-content: space-around;
+        margin-top: 54px;
+
+        &__items {
+            flex-wrap: nowrap;
+            min-width: 794px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
 .copyright {
     text-align: center;
     font-size: 14px;
@@ -683,7 +902,11 @@
     margin-top: 0;
 }
 
-
-
+@media(max-width:@screen_tablet) {
+    .copyright {
+        margin-right: 0;
+        font-size: 16px;
+    }
+}
 
 

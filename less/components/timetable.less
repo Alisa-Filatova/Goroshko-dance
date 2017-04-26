@@ -105,3 +105,25 @@
         color: @pink;
     }
 }
+
+
+@media(max-width:@screen_tablet) {
+    .table {
+        font-size: 18px;
+        margin-top: 44px;
+
+        &__cell {
+            border-right: none;
+            padding: 8px 0;
+        }
+
+        &__heading {
+            padding-bottom: 0;
+            border-right: none;
+        }
+
+        &__correction {
+            text-align: center;
+        }
+    }
+}

@@ -1,37 +1,23 @@
 @import '../../variables';
 
-
 .close-btn {
-    border: none;
-    background-color: transparent;
-    position: relative;
     display: none;
-    outline: none;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+}
 
-    &::after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 4px;
-        background-color: @purple;
-        position: absolute;
-        top: 9px;
-        left: 2px;
-        transform: rotate(41deg);
-    }
-
-    &::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 4px;
-        background-color: @purple;
-        position: absolute;
-        top: 9px;
-        left: 2px;
-        transform: rotate(137deg);
-    }
+.close-btn-show {
+    display: block;
+    z-index: 1500;
+    background-color: @pink;
+    position: absolute;
+    width: 60px;
+    height: 38px;
+    top: 15px;
+    right: 52px;
+    border: none;
+    background-image: url('../img/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 93%;
+    animation: fade-in ease-in;
+    animation-duration: 1s;
 }
