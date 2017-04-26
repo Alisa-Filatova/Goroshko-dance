@@ -1,0 +1,27 @@
+.paginator {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 300;
+  z-index: 1000;
+}
+.paginator__item {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #272961;
+  opacity: 0.8;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-left: -51px;
+}
+.paginator__item_active {
+  background-color: #272961;
+}
+.paginator__item:hover {
+  opacity: 1;
+  transiton: 0.3s;
+}
+.paginator__item:active {
+  background-color: #272961;
+}

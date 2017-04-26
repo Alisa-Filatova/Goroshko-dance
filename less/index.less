@@ -6,6 +6,7 @@
 @import 'components/controls/btn';
 @import 'components/timetable';
 @import 'components/modal-post-form';
+@import 'animation';
 
 
 .page-header {
@@ -23,6 +24,21 @@
         left: 274px;
         top: 154px;
         transform: rotate(-6deg);
+        animation: fade-in ease-in;
+        animation-duration: 1s;
+    }
+}
+
+.page-header {
+
+    @media(max-width:@screen_tablet) {
+        padding-bottom: 130px;
+
+        &__logo {
+            width: 370px;
+            left: 144px;
+            top: 49px;
+        }
     }
 }
 
@@ -64,7 +80,22 @@
         text-decoration: none;
         color: @white;
         font-family: 'PT Serif', 'Times New Roman', serif;
+        font-size: 21px;
         padding: 15px 30px;
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
+        animation: fade-in ease-in;
+        animation-duration: 1s;
 
         &:hover {
             opacity: 0.8;
@@ -72,7 +103,6 @@
 
         &:active {
             color: @purple;
-            transition: 0.3s;
         }
     }
 
@@ -88,6 +118,20 @@
         align-items: center;
         padding-left: 0;
         transform: rotate(-6deg);
+        margin-left: -55px;
+    }
+}
+
+
+@media(max-width:@screen_tablet) {
+
+    .main-nav {
+        background-size: 163%;
+
+        &__items {
+            flex-flow: column wrap;
+            transform: rotate(0);
+        }
     }
 }
 
@@ -106,6 +150,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70%;
+        transition: opacity 0.3s linear;
 
         &_vk {
             background-image: url('../img/vk-white.svg');
@@ -121,7 +166,11 @@
 
         &:hover {
             opacity: 1;
-            transition: 0.3s;
+            animation: wabble 0.8s;
+        }
+
+        &:active {
+            opacity: 0.4;
         }
     }
 }
@@ -158,6 +207,7 @@
         margin-top: 0;
     }
 
+
     &::after {
         content: '';
         width: 182px;
@@ -168,6 +218,8 @@
         position: absolute;
         top: -61px;
         left: 15px;
+        animation: fade-in-down;
+        animation-duration: 1s;
     }
 
     &::before {
@@ -180,6 +232,8 @@
         position: absolute;
         bottom: -149px;
         left: 544px;
+        animation: fade-in-down;
+        animation-duration: 1.5s;
     }
 }
 
@@ -219,10 +273,21 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        -webkit-transition-property: background-image;
+        -moz-transition-property: background-image;
+        -o-transition-property: background-image;
+        transition-property: background-image;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
 
         &:hover {
            background-image: url('../img/about-desktop-hover.jpg');
-           transition: 0.4s;
         }
     }
 
@@ -456,7 +521,6 @@
     }
 }
 
-
 .contacts {
     .container();
     background-color: @white;
@@ -513,6 +577,7 @@
         background-position: center;
         background-size: 60%;
         opacity: 0.8;
+        transition: opacity 0.3s linear;
 
         &_vk {
             background-image: url('../img/vk-icon-purple.svg');
@@ -528,7 +593,10 @@
 
         &:hover {
             opacity: 1;
-            transition: 0.3s;
+        }
+
+        &:active {
+            opacity: 0.5;
         }
     }
 
@@ -555,6 +623,18 @@
         font-size: 18px;
         max-width: 312px;
         justify-content: space-between;
+        -webkit-transition-property: background;
+        -moz-transition-property: background;
+        -o-transition-property: background;
+        transition-property: background;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
     }
 
     &__link {
@@ -563,19 +643,34 @@
 
         &:hover {
             color: @pink;
-            transition: 0.3s;
+        }
+
+        &:active {
+            opacity: 0.8;
         }
     }
 
     &__logo {
         cursor: pointer;
+        -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
+        -o-transition-property: opacity;
+        transition-property: opacity;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
 
         &:hover {
             opacity: 0.8;
-            transition: 0.3s;
+
         }
 
-        &:hover {
+        &:active {
             opacity: 0.5;
         }
     }
