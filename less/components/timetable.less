@@ -108,9 +108,10 @@
 
 
 @media(max-width:@screen_tablet) {
+
     .table {
         font-size: 18px;
-        margin-top: 44px;
+        margin-top: 70px;
 
         &__cell {
             border-right: none;
@@ -127,3 +128,46 @@
         }
     }
 }
+
+@media(max-width:@screen_mobile) {
+
+    .table {
+        font-size: 16px;
+        margin-top: 28px;
+
+        &__heading {
+            padding-top: 0;
+            width: auto;
+            font-size: 0;
+            width: 94px;
+        }
+
+        &__cell {
+            padding: 0;
+        }
+
+        &__logo {
+            width: 85px;
+            height: 41px;
+            margin-top: 11px;
+        }
+
+        &__icon {
+            width: 26px;
+            height: 29px;
+            margin-top: 5px;
+            margin-bottom: -25px;
+        }
+
+        &__btn {
+            margin-left: 80px;
+        }
+
+        &::before {
+            font-size: 74px;
+            top: -24px;
+        }
+    }
+}
+
+

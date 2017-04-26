@@ -1,0 +1,60 @@
+@import '../variables';
+
+.social-item {
+
+    &__link {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0;
+        width: 41px;
+        height: 41px;
+        border: 2px solid @white;
+        border-radius: 50%;
+        margin-right: 10px;
+        opacity: 0.6;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+        transition: opacity 0.3s linear;
+
+        &_vk {
+            background-image: url('../img/vk-white.svg');
+        }
+
+        &_youtube {
+            background-image: url('../img/youtube-white.svg');
+        }
+
+        &_phone {
+            background-image: url('../img/phone-white.svg');
+        }
+
+        &:hover {
+            opacity: 1;
+            animation: wabble 0.8s;
+        }
+
+        &:active {
+            opacity: 0.4;
+        }
+    }
+}
+
+@media(max-width:@screen_tablet) {
+
+    .social-item {
+        &__link {
+            opacity: 0.8;
+        }
+    }
+}
+
+@media(max-width:@screen_mobile) {
+
+    .social-item {
+        &__link {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
