@@ -5,6 +5,7 @@
 @import 'animation';
 @import 'components/controls/paginator';
 @import 'components/controls/btn';
+@import 'components/controls/close-btn';
 @import 'components/timetable';
 @import 'components/modal-post-form';
 @import 'components/direction-item';
@@ -101,10 +102,6 @@
         transform: rotate(-2deg);
     }
 
-    &__close-btn {
-        display: none;
-    }
-
     &__menu-open {
         display: none;
     }
@@ -115,10 +112,10 @@
         font-family: 'PT Serif', 'Times New Roman', serif;
         font-size: 1.1em;
         padding: 15px 30px;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
+        -webkit-transition-property: color;
+        -moz-transition-property: color;
+        -o-transition-property: color;
+        transition-property: color;
         -webkit-transition-duration: 0.2s;
         -moz-transition-duration: 0.2s;
         -o-transition-duration: 0.2s;
@@ -128,10 +125,10 @@
         -o-transition-timing-function: linear;
         transition-timing-function: linear;
         animation: fade-in ease-in;
-        animation-duration: 1s;
+        animation-duration: 1.2s;
 
         &:hover {
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.5);
         }
 
         &:active {
@@ -160,19 +157,20 @@
 
     .main-nav {
         background-size: 163%;
+        position: absolute;
 
         &__items {
-            flex-flow: column wrap;
-            transform: rotate(0);
-            width: 97%;
-            z-index: 2000;
-            align-items: flex-end;
             display: none;
         }
 
         &__items_show {
-            display: flex;
-            animation: slide-in-left 1s ease;
+            display: inline-block;
+            transform: rotate(0);
+            z-index: 2000;
+            animation: slide-in-down 0.8s ease;
+            position: absolute;
+            left: 0;
+            top: 76px;
         }
 
         &__item {
@@ -182,11 +180,16 @@
 
         &__link {
             background-color: @pink;
-            font-size: 27px;
+            font-size: 1.8em;
             text-align: center;
-            width: 158px;
+            width: 100%;
             border-bottom: 2px solid @pink_dark;
-            padding: 29px 70px;
+            padding: 46px 356px;
+
+            &:active {
+                background-color: @pink_dark;
+                color: @purple;
+            }
         }
 
         &__menu-open {
@@ -229,7 +232,11 @@
 
         &__items {
             margin-top: -18px;
-            width: 92%;
+        }
+
+        &__link {
+            padding: 32px 121px;
+            font-size: 1.5em;
         }
     }
 }
@@ -305,6 +312,10 @@
         background-position-x: 96%;
         background-position-y: 28%;
         background-size: 45%;
+
+        &__title {
+            font-size: 1.8em;
+        }
 
         &__wrapper {
             margin-left: 0;

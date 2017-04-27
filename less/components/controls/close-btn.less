@@ -4,20 +4,33 @@
     display: none;
 }
 
-.close-btn-show {
-    display: block;
-    z-index: 1500;
-    background-color: @pink;
-    position: absolute;
-    width: 60px;
-    height: 38px;
-    top: 15px;
-    right: 52px;
-    border: none;
-    background-image: url('../img/close.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 93%;
-    animation: fade-in ease-in;
-    animation-duration: 1s;
+@media(max-width:@screen_tablet) {
+
+    .close-btn {
+        display: block;
+        z-index: 1500;
+        background-color: @pink;
+        position: absolute;
+        width: 60px;
+        height: 38px;
+        top: 15px;
+        right: 52px;
+        border: none;
+        background-image: url('../img/close.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 93%;
+        animation: fade-in ease-in;
+        animation-duration: 1s;
+    }
+}
+
+@media(max-width:@screen_mobile) {
+
+    .close-btn {
+        width: 48px;
+        height: 31px;
+        top: 8px;
+        right: 26px;
+    }
 }
