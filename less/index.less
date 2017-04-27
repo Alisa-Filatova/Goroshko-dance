@@ -17,7 +17,8 @@
     background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
     background-repeat: no-repeat;
     background-position: bottom center, top center;
-    background-size: 101%, 100%;
+    background-size: 101%, 1440px auto;
+    background-attachment: scroll, fixed;
     padding-top: 400px;
     padding-bottom: 430px;
 
@@ -27,7 +28,7 @@
         top: 154px;
         transform: rotate(-6deg);
         animation: fade-in ease-in;
-        animation-duration: 1s;
+        animation-duration: 1.5s;
     }
 }
 
@@ -36,6 +37,9 @@
 
     .page-header {
         padding-bottom: 130px;
+        background-image: url('../img/white-cover.svg'), url('../img/main-tablet.jpg');
+        background-size: 101%, 943px auto;
+        background-attachment: scroll, fixed;
 
         &__logo {
             width: 370px;
@@ -49,15 +53,27 @@
 
     .page-header {
         padding-bottom: 290px;
-        background-size: 101%, 133%;
+        background-image: url('../img/white-cover.svg'), url('../img/main-mobile.jpg');
+        background-size: 170%, 192%;
+        background-attachment: scroll;
 
         &__logo {
-            width: 270px;
-            left: 67px;
+            width: 230px;
+            left: 17px;
             top: 13px;
         }
     }
 }
+
+@media(min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2),
+      (min-width: 1440px) and (min-resolution: 1.5dppx),
+      (min-width: 1440px) and (min-resolution: 192dpi) {
+
+    .page-header {
+        background-image: url('../img/white-cover.svg'), url('../img/main-retina.jpg');
+    }
+}
+
 
 .main-nav {
     .container();
@@ -97,7 +113,7 @@
         text-decoration: none;
         color: @white;
         font-family: 'PT Serif', 'Times New Roman', serif;
-        font-size: 21px;
+        font-size: 1.1em;
         padding: 15px 30px;
         -webkit-transition-property: opacity;
         -moz-transition-property: opacity;
@@ -148,7 +164,7 @@
         &__items {
             flex-flow: column wrap;
             transform: rotate(0);
-            width: 100%;
+            width: 97%;
             z-index: 2000;
             align-items: flex-end;
             display: none;
@@ -196,19 +212,19 @@
 @media(max-width:@screen_mobile) {
 
     .main-nav {
-        background-size: 325%;
+        background-size: 238%;
 
         &__menu-open {
             width: 48px;
             height: 31px;
-            top: 15px;
+            top: 8px;
             right: 26px;
         }
 
         &__social-items {
             transform: rotate(-5deg);
             margin-left: 0;
-            margin-top: 25px;
+            margin-top: 4px;
         }
 
         &__items {
@@ -238,14 +254,14 @@
     }
 
     &__description {
-        font-size: 21px;
-        line-height: 31px;
+        font-size: 1.1em;
+        line-height: 1.6em;
     }
 
     &__title {
         font-family: 'PT Serif', 'Times New Roman', serif;
-        font-size: 44px;
-        line-height: 61px;
+        font-size: 2.3em;
+        line-height: 1.3em;
         font-weight: 400;
         margin-top: 0;
     }
@@ -285,14 +301,10 @@
     .promo {
         padding-top: 65px;
         padding-bottom: 0;
-        background-position-x: 93%;
+        background-image: url('../img/promo-tablet.png');
+        background-position-x: 96%;
         background-position-y: 28%;
         background-size: 45%;
-
-        &__title {
-            font-size: 34px;
-            line-height: 51px;
-        }
 
         &__wrapper {
             margin-left: 0;
@@ -320,7 +332,7 @@
 
     .promo {
         background-image: none;
-        padding-top: 12px;
+        padding-top: 47px;
 
         &::before {
             display: none;
@@ -330,19 +342,19 @@
             width: 287px;
             height: 219px;
             opacity: 0.1;
-            top: 146px;
+            top: 128px;
             animation: none;
         }
 
         &__title {
-            font-size: 27px;
-            line-height: 39px;
+            font-size: 1.4em;
+            line-height: 1.5em;
             text-align: center;
             margin-left: 7px;
         }
 
         &__description {
-            font-size: 17px;
+            font-size: 0.86em;
             margin-top: 0;
             margin-bottom: 0;
             text-align: center;
@@ -410,8 +422,8 @@
     }
 
     &__title {
-        font-size: 35px;
-        line-height: 45px;
+        font-size: 1.8em;
+        line-height: 1.6em;
         font-family: 'PT Serif', 'Times New Roman', serif;
         font-weight: 400;
         color: #0f1014;
@@ -429,6 +441,7 @@
             order: 2;
             border-radius: 0;
             margin-right: -58px;
+            background-image: url('../img/about-tablet.jpg');
         }
 
         &__wrapper {
@@ -449,8 +462,16 @@
 @media(max-width:@screen_mobile) {
 
     .about-me {
-        padding-top: 1px;
+        padding-top: 57px;
         background-size: 210%;
+
+        &__title {
+            margin-top: 20px;
+        }
+
+        &__heading {
+            margin-top: 0;
+        }
 
         &__photo {
             width: 250px;
@@ -458,22 +479,23 @@
             order: 1;
             border-radius: 50%;
             margin-right: 0;
+            background-image: url('../img/about-mobile.jpg');
         }
 
         &__description {
             order: 2;
             margin-left: 0;
             margin-right: 0;
-            background-color: @grey;
         }
 
         &__wrapper {
             flex-flow: row wrap;
             justify-content: center;
-            background-image: none;
+            background-image: linear-gradient(to top, transparent 3%, @grey 59%);
             box-shadow: none;
             text-align: center;
             margin-top: 15px;
+            padding-bottom: 22px;
         }
     }
 }
@@ -641,10 +663,9 @@
             display: none;
         }
 
-        &_links {
-            margin-left: 0;
+        &__links {
             justify-content: flex-end;
-            margin-top: -6px;
+            margin-top: 3px;
         }
     }
 }
@@ -669,7 +690,7 @@
         padding-top: 4px;
 
         &__heading {
-            transform: rotate(-4px);
+            transform: rotate(-4deg);
         }
     }
 }
@@ -691,7 +712,7 @@
     background-repeat: no-repeat;
     background-size: 102%;
     padding-top: 13px;
-    font-size: 20px;
+    font-size: 1.06em;
     padding-bottom: 50px;
 
     &__heading {
@@ -727,7 +748,7 @@
         padding-bottom: 0;
 
         &__wrapper {
-            margin-top: 53px;
+            margin-top: 75px;
         }
 
         &__items {
@@ -829,7 +850,7 @@
         flex-flow: row wrap;
         padding: 0;
         list-style: none;
-        font-size: 18px;
+        font-size: 1em;
         max-width: 312px;
         justify-content: space-between;
         -webkit-transition-property: background;
@@ -916,7 +937,7 @@
 
 .copyright {
     text-align: center;
-    font-size: 14px;
+    font-size: 0.7em;
     margin-right: 85px;
     margin-top: 0;
 }
@@ -924,7 +945,7 @@
 @media(max-width:@screen_tablet) {
     .copyright {
         margin-right: 0;
-        font-size: 16px;
+        font-size: 0.8em;
     }
 }
 
