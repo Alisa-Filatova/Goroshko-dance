@@ -54,13 +54,13 @@
 
     .page-header {
         padding-bottom: 290px;
-        background-image: url('../img/white-cover.svg'), url('../img/main-mobile.jpg');
-        background-size: 170%, 192%;
+        background-image: url('../img/white-cover.svg');
+        background-size: 170%;
         background-attachment: scroll;
 
         &__logo {
-            width: 230px;
-            left: 17px;
+            width: 312px;
+            left: 51px;
             top: 13px;
         }
     }
@@ -78,24 +78,25 @@
 
 .main-nav {
     .container();
-    background-image: url('../img/header.min.svg');
-    background-repeat: no-repeat;
-    background-size: 101%;
-    background-position: top center;
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     padding-bottom: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/header.min.svg');
+    background-repeat: no-repeat;
+    background-size: 101%;
+    background-position: top center;
+
 
     &__items {
-        list-style: none;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
+        list-style: none;
         color: @white;
         padding-left: 0;
         margin: 0;
@@ -141,12 +142,12 @@
     }
 
     &__social-items {
-       list-style: none;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
         padding-left: 0;
+        list-style: none;
         transform: rotate(-6deg);
         margin-left: -55px;
     }
@@ -165,12 +166,12 @@
 
         &__items_show {
             display: inline-block;
-            transform: rotate(0);
-            z-index: 2000;
-            animation: slide-in-down 0.8s ease;
             position: absolute;
             left: 0;
             top: 76px;
+            transform: rotate(0);
+            z-index: 2000;
+            animation: slide-in-down 0.8s ease;
         }
 
         &__item {
@@ -194,13 +195,13 @@
 
         &__menu-open {
             display: block;
-            z-index: 1500;
-            background-color: @pink;
-            position: absolute;
             width: 60px;
             height: 38px;
+            position: absolute;
             top: 15px;
             right: 52px;
+            z-index: 1500;
+            background-color: @pink;
             border: none;
             background-image: url('../img/menu.min.svg');
             background-repeat: no-repeat;
@@ -343,7 +344,7 @@
 
     .promo {
         background-image: none;
-        padding-top: 47px;
+        padding-top: 22px;
 
         &::before {
             display: none;
@@ -410,20 +411,19 @@
         background-position: center;
         background-size: cover;
         -webkit-transition-property: background-image;
-        -moz-transition-property: background-image;
         -o-transition-property: background-image;
         transition-property: background-image;
         -webkit-transition-duration: 0.5s;
-        -moz-transition-duration: 0.5s;
         -o-transition-duration: 0.5s;
         transition-duration: 0.5s;
         -webkit-transition-timing-function: linear;
-        -moz-transition-timing-function: linear;
         -o-transition-timing-function: linear;
         transition-timing-function: linear;
 
         &:hover {
            background-image: url('../img/about-desktop-hover.jpg');
+           -moz-animation: fade-in 0.6s ease-in-out;
+           -ms-animation: fade-in 0.5s ease-in-out;
         }
     }
 
@@ -459,7 +459,7 @@
             flex-flow: row nowrap;
             padding-top: 0;
             padding-bottom: 0;
-            background-image: linear-gradient(to right, transparent 0%, @grey 39%);
+            background-image: none;
         }
 
         &__description {
@@ -502,7 +502,6 @@
         &__wrapper {
             flex-flow: row wrap;
             justify-content: center;
-            background-image: linear-gradient(to top, transparent 3%, @grey 59%);
             box-shadow: none;
             text-align: center;
             margin-top: 15px;
@@ -724,7 +723,7 @@
     background-size: 102%;
     padding-top: 13px;
     font-size: 1.06em;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 
     &__heading {
         transform: rotate(-4deg);
@@ -941,6 +940,7 @@
             flex-wrap: wrap;
             min-width: 320px;
             margin-top: 3px;
+            display: none;
         }
 
     }
