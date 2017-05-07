@@ -517,12 +517,6 @@ body {
 }
 @media (max-width: 768px) {
   .paginator {
-    top: 204px;
-    transform: translateX(-19px);
-  }
-}
-@media (max-width: 420px) {
-  .paginator {
     display: none;
   }
 }
