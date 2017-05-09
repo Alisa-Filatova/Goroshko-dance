@@ -6,9 +6,8 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
-    padding-top: 49px;
-    padding-bottom: 47px;
     width: 1060px;
+    height: 333px;
     background-image: linear-gradient(to right, transparent 15%, @grey 15%);
     position: relative;
 
@@ -20,7 +19,7 @@
         background-repeat: no-repeat;
         background-size: 100%;
         position: absolute;
-        left: -11px;
+        left: -10px;
         top: -3px;
 
     }
@@ -72,11 +71,11 @@
 
     &__btn {
         transform: rotate(270deg);
-        padding: 11px 110px;
         position: absolute;
         right: -193px;
-        top: 141px;
-        max-width: 334px;
+        top: 140px;
+        width: 253px;
+        text-align: center;
         box-shadow: inset 0 24px 43px -23px #121428;
         color: rgba(255, 255, 255, 0.7);
         background-color: @purple;
@@ -105,9 +104,8 @@
 @media(max-width:@screen_tablet) {
 
     .direction-item {
-        padding-top: 36px;
-        padding-bottom: 36px;
         background-image: linear-gradient(to right, transparent 14%, @grey 14%);
+        height: 292px;
 
         &__photo {
             width: 185px;
@@ -123,7 +121,7 @@
         }
 
         &__btn {
-            padding: 11px 89px;
+            width: 211px;
             right: -173px;
             top: 119px;
         }
@@ -142,6 +140,10 @@
         text-align: center;
         background-image: none;
         background-color: @grey;
+        width: auto;
+        height: auto;
+        padding-bottom: 30px;
+        padding-top: 30px;
 
         &::after {
             display: none;
@@ -156,6 +158,10 @@
             margin-bottom: 20px;
             max-width: 354px;
             margin-left: 10px;
+        }
+
+        &__title {
+            line-height: 1.2em;
         }
     }
 }

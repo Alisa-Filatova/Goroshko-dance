@@ -40,7 +40,7 @@
         padding-bottom: 130px;
         background-image: url('../img/white-cover.svg'), url('../img/main-tablet.jpg');
         background-size: 101%, 943px auto;
-        background-attachment: scroll, fixed;
+        background-attachment: scroll;
 
         &__logo {
             width: 370px;
@@ -113,18 +113,10 @@
         font-family: 'PT Serif', 'Times New Roman', serif;
         font-size: 1.1em;
         padding: 15px 30px;
-        -webkit-transition-property: color;
-        -moz-transition-property: color;
-        -o-transition-property: color;
-        transition-property: color;
-        -webkit-transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: linear;
-        -moz-transition-timing-function: linear;
-        -o-transition-timing-function: linear;
-        transition-timing-function: linear;
+        -webkit-transition: color 0.2s linear;
+        -moz-transition: color 0.2s linear;
+        -o-transition: color 0.2s linear;
+        transition: color 0.2s linear;
         animation: fade-in ease-in;
         animation-duration: 1.2s;
 
@@ -171,7 +163,7 @@
             top: 76px;
             transform: rotate(0);
             z-index: 2000;
-            animation: slide-in-down 0.8s ease;
+            animation: slide-in-down 0.4s ease;
         }
 
         &__item {
@@ -186,6 +178,7 @@
             width: 100%;
             border-bottom: 2px solid @pink_dark;
             padding: 46px 356px;
+            animation: none;
 
             &:active {
                 background-color: @pink_dark;
@@ -207,8 +200,11 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: 93%;
-            animation: fade-in ease-in;
-            animation-duration: 1s;
+            outline: none;
+        }
+
+        &__menu-open_hidden {
+            z-index: 1200;
         }
     }
 }
@@ -225,14 +221,12 @@
             right: 26px;
         }
 
-        &__social-items {
-            transform: rotate(-5deg);
-            margin-left: 0;
-            margin-top: 4px;
+        &__items_show {
+            top: 42px;
         }
 
-        &__items {
-            margin-top: -18px;
+        &__social-items {
+            visibility: hidden;
         }
 
         &__link {
@@ -313,6 +307,7 @@
         background-position-x: 96%;
         background-position-y: 28%;
         background-size: 45%;
+        background-attachment: scroll;
 
         &__title {
             font-size: 1.8em;
@@ -587,7 +582,7 @@
         margin-bottom: 10px;
         margin-top: 75px;
         margin-left: auto;
-        max-width: 322px;
+        width: 115px;
     }
 
     &__link-item {
@@ -628,6 +623,7 @@
         padding-bottom: 4px;
         text-transform: none;
         position: relative;
+        bottom: -108px;
 
         &::after {
             content: '';
@@ -651,6 +647,10 @@
         &__links {
             margin-top: 20px;
         }
+
+        &__btn {
+            bottom: -57px;
+        }
     }
 }
 
@@ -662,6 +662,8 @@
         &__btn {
             padding: 0px 8px;
             padding-bottom: 0px;
+            bottom: -4px;
+            left: 240px;
 
             &::after {
                 display: none;

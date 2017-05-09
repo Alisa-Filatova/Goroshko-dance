@@ -3,7 +3,7 @@
 
 body {
     position: relative;
-    min-width: @screen_desktop;
+    max-width: @screen_desktop;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
@@ -14,10 +14,12 @@ body {
     margin: auto;
 
     @media (max-width: @screen_tablet) {
+        max-width: @screen_tablet;
         min-width: 420px;
     }
 
     @media (max-width: @screen_mobile) {
+        max-width: @screen_mobile;
         min-width: 320px;
     }
 }
