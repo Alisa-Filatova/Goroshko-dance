@@ -787,14 +787,19 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
+@media (max-width: 420px) {
+  .modal-overlay_show {
+    opacity: 0;
+  }
+}
 .modal-post-form {
   display: block;
   position: fixed;
   top: 50%;
   left: 50%;
   width: 652px;
-  margin-top: -273px;
-  margin-left: -305px;
+  margin-top: -280px;
+  margin-left: -133px;
   border-top: 8px solid #272961;
   overflow: hidden;
   background-image: linear-gradient(180deg, #ffffff 95%, #e23a59 37%);
