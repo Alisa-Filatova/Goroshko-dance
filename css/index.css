@@ -786,11 +786,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-}
-@media (max-width: 420px) {
-  .modal-overlay_show {
-    opacity: 0;
-  }
+  overflow: hidden;
 }
 .modal-post-form {
   display: block;
@@ -799,7 +795,7 @@ body {
   left: 50%;
   width: 652px;
   margin-top: -280px;
-  margin-left: -133px;
+  margin-left: -329px;
   border-top: 8px solid #272961;
   overflow: hidden;
   background-image: linear-gradient(180deg, #ffffff 95%, #e23a59 37%);
@@ -1237,6 +1233,9 @@ body {
     background-color: #cc3253;
     color: #272961;
   }
+  .main-nav__social-items {
+    visibility: hidden;
+  }
   .main-nav__menu-open {
     display: block;
     width: 60px;
@@ -1269,9 +1268,6 @@ body {
   }
   .main-nav__items_show {
     top: 42px;
-  }
-  .main-nav__social-items {
-    visibility: hidden;
   }
   .main-nav__link {
     padding: 32px 118px;
