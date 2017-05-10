@@ -3,7 +3,7 @@
 
 body {
     position: relative;
-    max-width: @screen_desktop;
+    min-width: 320px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
@@ -12,17 +12,8 @@ body {
     background-color: @grey;
     text-align: left;
     margin: auto;
-
-    @media (max-width: @screen_tablet) {
-        max-width: @screen_tablet;
-        min-width: 420px;
-    }
-
-    @media (max-width: @screen_mobile) {
-        max-width: @screen_mobile;
-        min-width: 320px;
-    }
 }
+
 
 .page-heading {
     font-family: 'PT Serif', 'Times New Roman', serif;
