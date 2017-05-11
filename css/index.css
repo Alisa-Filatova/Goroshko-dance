@@ -1066,12 +1066,12 @@ body {
   padding-top: 400px;
   padding-bottom: 430px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .page-header {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .page-header {
     width: 375px;
     padding: 0 20px;
@@ -1256,12 +1256,12 @@ body {
   padding-bottom: 38px;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .promo {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .promo {
     width: 375px;
     padding: 0 20px;
@@ -1380,12 +1380,12 @@ body {
   padding-top: 70px;
   padding-bottom: 35px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .about-me {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .about-me {
     width: 375px;
     padding: 0 20px;
@@ -1511,12 +1511,12 @@ body {
   padding-top: 23px;
   padding-bottom: 15px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .directions {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .directions {
     width: 375px;
     padding: 0 20px;
@@ -1570,12 +1570,12 @@ body {
   padding-top: 23px;
   padding-bottom: 30px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .video {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .video {
     width: 375px;
     padding: 0 20px;
@@ -1682,12 +1682,12 @@ body {
   padding-top: 23px;
   padding-bottom: 23px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .timetable {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .timetable {
     width: 375px;
     padding: 0 20px;
@@ -1724,12 +1724,12 @@ body {
   font-size: 1.06em;
   padding-bottom: 25px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .contacts {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .contacts {
     width: 375px;
     padding: 0 20px;
@@ -1793,12 +1793,12 @@ body {
   padding-top: 80px;
   padding-bottom: 10px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     width: 768px;
   }
 }
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .footer {
     width: 375px;
     padding: 0 20px;
