@@ -50,7 +50,7 @@ body {
   font-size: 1.2em;
   line-height: 1.65em;
   max-width: 1440px;
-  min-width: 320px;
+  min-width: 1440px;
   color: #110a0a;
   background-color: #f2f2f2;
   text-align: left;
@@ -60,12 +60,12 @@ body {
 }
 @media (max-width: 768px) {
   body {
-    max-width: 768px;
+    min-width: 768px;
   }
 }
 @media (max-width: 420px) {
   body {
-    max-width: 420px;
+    min-width: 320px;
   }
 }
 .page-heading {
@@ -1076,7 +1076,7 @@ body {
   background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
   background-repeat: no-repeat;
   background-position: bottom center, top center;
-  background-size: 101%, contain;
+  background-size: 101%, 1440px auto;
   background-attachment: scroll, fixed;
   padding-top: 400px;
   padding-bottom: 430px;
