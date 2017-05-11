@@ -1,20 +1,38 @@
 @import 'fonts';
 @import 'variables';
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
     position: relative;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
     line-height: 1.65em;
+    max-width: 1440px;
     min-width: 320px;
     color: #110a0a;
     background-color: @grey;
     text-align: left;
-    margin: auto;
+    margin: 0 auto;
     overflow-y: scroll;
     overflow-x: hidden;
-    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    max-width: 420px;
+  }
 }
 
 .page-heading {

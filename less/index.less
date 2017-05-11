@@ -18,7 +18,7 @@
     background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
     background-repeat: no-repeat;
     background-position: bottom center, top center;
-    background-size: 101%, 1440px auto;
+    background-size: 101%, contain;
     background-attachment: scroll, fixed;
     padding-top: 400px;
     padding-bottom: 430px;
@@ -55,6 +55,7 @@
     .page-header {
         padding-bottom: 290px;
         background-image: url('../img/white-cover.svg');
+        background-size: 110%;
         background-attachment: scroll;
 
         &__logo {
@@ -86,7 +87,7 @@
     left: 0;
     background-image: url('../img/header.min.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 101%;
     background-position: top center;
 
 
@@ -116,8 +117,7 @@
         -moz-transition: color 0.2s linear;
         -o-transition: color 0.2s linear;
         transition: color 0.2s linear;
-        animation: fade-in ease-in;
-        animation-duration: 1.2s;
+        animation: fade-in 1.2s ease-in;
 
         &:hover {
             color: rgba(255, 255, 255, 0.5);
@@ -148,6 +148,7 @@
 @media(max-width:@screen_tablet) {
 
     .main-nav {
+        background-size: 234%;
 
         &__items {
             display: none;
@@ -158,6 +159,7 @@
             position: absolute;
             left: 0;
             top: 76px;
+            width: 100%;
             transform: rotate(0);
             z-index: 2000;
             animation: slide-in-down 0.4s ease;
@@ -170,11 +172,11 @@
 
         &__link {
             background-color: @pink;
+            padding: 32px;
+            width: 100%;
             font-size: 1.8em;
             text-align: center;
-            width: 100%;
             border-bottom: 2px solid @pink_dark;
-            padding: 46px 356px;
             animation: none;
 
             &:active {
@@ -213,6 +215,7 @@
 @media(max-width:@screen_mobile) {
 
     .main-nav {
+         background-size: 234%;
 
         &__menu-open {
             width: 48px;
@@ -226,7 +229,6 @@
         }
 
         &__link {
-            padding: 32px 118px;
             font-size: 1.5em;
         }
     }
@@ -401,15 +403,9 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        -webkit-transition-property: background-image;
-        -o-transition-property: background-image;
-        transition-property: background-image;
-        -webkit-transition-duration: 0.5s;
-        -o-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-        -webkit-transition-timing-function: linear;
-        -o-transition-timing-function: linear;
-        transition-timing-function: linear;
+        -webkit-transition: background-image 0.5s linear;
+        -o-transition: background-image 0.5s linear;
+        transition: background-image 0.5s linear;
 
         &:hover {
            background-image: url('../img/about-desktop-hover.jpg');
@@ -465,7 +461,7 @@
 
     .about-me {
         padding-top: 57px;
-        background-size: 210%;
+        background-size: 227%;
 
         &__title {
             margin-top: 20px;
@@ -659,7 +655,7 @@
             padding: 0px 8px;
             padding-bottom: 0px;
             bottom: -4px;
-            left: 240px;
+            left: 206px;
 
             &::after {
                 display: none;
@@ -708,7 +704,7 @@
     .timetable {
         padding-top: 4px;
         padding-bottom: 20px;
-        background-size: 207%;
+        background-size: 223%;
     }
 }
 
@@ -770,7 +766,7 @@
     .contacts {
         padding-top: 2px;
         padding-bottom: 20px;
-        background-size: 196%;
+        background-size: 225%;
 
         &__wrapper {
             margin-top: 35px;
@@ -861,18 +857,10 @@
         font-size: 1em;
         max-width: 312px;
         justify-content: space-between;
-        -webkit-transition-property: background;
-        -moz-transition-property: background;
-        -o-transition-property: background;
-        transition-property: background;
-        -webkit-transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: linear;
-        -moz-transition-timing-function: linear;
-        -o-transition-timing-function: linear;
-        transition-timing-function: linear;
+        -webkit-transition: background 0.2s linear;
+        -moz-transition: background 0.2s linear;
+        -o-transition: background 0.2s linear;
+        transition: background 0.2s linear;
     }
 
     &__link {
@@ -890,18 +878,10 @@
 
     &__logo {
         cursor: pointer;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
-        -webkit-transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
-        -o-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: linear;
-        -moz-transition-timing-function: linear;
-        -o-transition-timing-function: linear;
-        transition-timing-function: linear;
+        -webkit-transition-property: opacity 0.2s linear;
+        -moz-transition-property: opacity 0.2s linear;
+        -o-transition-property: opacity 0.2s linear;
+        transition-property: opacity 0.2s linear;
 
         &:hover {
             opacity: 0.8;

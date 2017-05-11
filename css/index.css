@@ -38,20 +38,35 @@
   src: local('PT Sans Bold'), local('PTSans-Bold'), url('../fonts/pt-sans-v8-cyrillic-ext_latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/pt-sans-v8-cyrillic-ext_latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/pt-sans-v8-cyrillic-ext_latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */ url('../fonts/pt-sans-v8-cyrillic-ext_latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/pt-sans-v8-cyrillic-ext_latin_cyrillic-700.svg#PTSans') format('svg');
   /* Legacy iOS */
 }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   position: relative;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.65em;
+  max-width: 1440px;
   min-width: 320px;
   color: #110a0a;
   background-color: #f2f2f2;
   text-align: left;
-  margin: auto;
+  margin: 0 auto;
   overflow-y: scroll;
   overflow-x: hidden;
-  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+@media (max-width: 420px) {
+  body {
+    max-width: 420px;
+  }
 }
 .page-heading {
   font-family: 'PT Serif', 'Times New Roman', serif;
@@ -690,7 +705,7 @@ body {
     margin-bottom: -25px;
   }
   .table__btn {
-    margin-left: 80px;
+    margin-left: 65px;
   }
   .table::before {
     font-size: 4em;
@@ -918,9 +933,9 @@ body {
 .direction-item__btn {
   transform: rotate(270deg);
   position: absolute;
-  right: -193px;
+  right: -191px;
   top: 140px;
-  width: 253px;
+  width: 332px;
   text-align: center;
   box-shadow: inset 0 24px 43px -23px #121428;
   color: rgba(255, 255, 255, 0.7);
@@ -1038,8 +1053,8 @@ body {
 }
 @import '../variables/';
 .map {
-  width: 620px;
-  height: 320px;
+  width: 711px;
+  height: 326px;
 }
 @media (max-width: 768px) {
   .map {
@@ -1049,19 +1064,19 @@ body {
 }
 @media (max-width: 420px) {
   .map {
-    width: 370px;
+    width: 340px;
     height: 300px;
   }
 }
 .page-header {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   position: relative;
   background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
   background-repeat: no-repeat;
   background-position: bottom center, top center;
-  background-size: 101%, 1440px auto;
+  background-size: 101%, contain;
   background-attachment: scroll, fixed;
   padding-top: 400px;
   padding-bottom: 430px;
@@ -1069,11 +1084,13 @@ body {
 @media (max-width: 768px) {
   .page-header {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .page-header {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1102,6 +1119,7 @@ body {
   .page-header {
     padding-bottom: 290px;
     background-image: url('../img/white-cover.svg');
+    background-size: 110%;
     background-attachment: scroll;
   }
   .page-header__logo {
@@ -1126,7 +1144,7 @@ body {
   left: 0;
   background-image: url('../img/header.min.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 101%;
   background-position: top center;
 }
 .main-nav__items {
@@ -1153,8 +1171,7 @@ body {
   -moz-transition: color 0.2s linear;
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
-  animation: fade-in ease-in;
-  animation-duration: 1.2s;
+  animation: fade-in 1.2s ease-in;
 }
 .main-nav__link:hover {
   color: rgba(255, 255, 255, 0.5);
@@ -1176,6 +1193,9 @@ body {
   margin-left: -55px;
 }
 @media (max-width: 768px) {
+  .main-nav {
+    background-size: 234%;
+  }
   .main-nav__items {
     display: none;
   }
@@ -1184,6 +1204,7 @@ body {
     position: absolute;
     left: 0;
     top: 76px;
+    width: 100%;
     transform: rotate(0);
     z-index: 2000;
     animation: slide-in-down 0.4s ease;
@@ -1194,11 +1215,11 @@ body {
   }
   .main-nav__link {
     background-color: #e23a59;
+    padding: 32px;
+    width: 100%;
     font-size: 1.8em;
     text-align: center;
-    width: 100%;
     border-bottom: 2px solid #cc3253;
-    padding: 46px 356px;
     animation: none;
   }
   .main-nav__link:active {
@@ -1229,6 +1250,9 @@ body {
   }
 }
 @media (max-width: 420px) {
+  .main-nav {
+    background-size: 234%;
+  }
   .main-nav__menu-open {
     width: 48px;
     height: 31px;
@@ -1239,12 +1263,11 @@ body {
     top: 42px;
   }
   .main-nav__link {
-    padding: 32px 118px;
     font-size: 1.5em;
   }
 }
 .promo {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1259,11 +1282,13 @@ body {
 @media (max-width: 768px) {
   .promo {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .promo {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1369,7 +1394,7 @@ body {
   }
 }
 .about-me {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1383,11 +1408,13 @@ body {
 @media (max-width: 768px) {
   .about-me {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .about-me {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1415,15 +1442,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-transition-property: background-image;
-  -o-transition-property: background-image;
-  transition-property: background-image;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
+  -webkit-transition: background-image 0.5s linear;
+  -o-transition: background-image 0.5s linear;
+  transition: background-image 0.5s linear;
 }
 .about-me__photo:hover {
   background-image: url('../img/about-desktop-hover.jpg');
@@ -1469,7 +1490,7 @@ body {
 @media (max-width: 420px) {
   .about-me {
     padding-top: 57px;
-    background-size: 210%;
+    background-size: 227%;
   }
   .about-me__title {
     margin-top: 20px;
@@ -1500,7 +1521,7 @@ body {
   }
 }
 .directions {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1514,11 +1535,13 @@ body {
 @media (max-width: 768px) {
   .directions {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .directions {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1559,7 +1582,7 @@ body {
   }
 }
 .video {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1573,11 +1596,13 @@ body {
 @media (max-width: 768px) {
   .video {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .video {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1656,7 +1681,7 @@ body {
     padding: 0px 8px;
     padding-bottom: 0px;
     bottom: -4px;
-    left: 240px;
+    left: 206px;
   }
   .video__btn::after {
     display: none;
@@ -1671,7 +1696,7 @@ body {
   }
 }
 .timetable {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1685,11 +1710,13 @@ body {
 @media (max-width: 768px) {
   .timetable {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .timetable {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1708,11 +1735,11 @@ body {
   .timetable {
     padding-top: 4px;
     padding-bottom: 20px;
-    background-size: 207%;
+    background-size: 223%;
   }
 }
 .contacts {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1727,11 +1754,13 @@ body {
 @media (max-width: 768px) {
   .contacts {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .contacts {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1771,7 +1800,7 @@ body {
   .contacts {
     padding-top: 2px;
     padding-bottom: 20px;
-    background-size: 196%;
+    background-size: 225%;
   }
   .contacts__wrapper {
     margin-top: 35px;
@@ -1782,7 +1811,7 @@ body {
   }
 }
 .footer {
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
   background-color: #ffffff;
@@ -1796,11 +1825,13 @@ body {
 @media (max-width: 768px) {
   .footer {
     width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 }
 @media (max-width: 420px) {
   .footer {
-    width: 375px;
+    width: 380px;
     padding: 0 20px;
   }
 }
@@ -1862,18 +1893,10 @@ body {
   font-size: 1em;
   max-width: 312px;
   justify-content: space-between;
-  -webkit-transition-property: background;
-  -moz-transition-property: background;
-  -o-transition-property: background;
-  transition-property: background;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-  -moz-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
 }
 .footer-nav__link {
   text-decoration: none;
@@ -1887,18 +1910,10 @@ body {
 }
 .footer-nav__logo {
   cursor: pointer;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-  -moz-transition-timing-function: linear;
-  -o-transition-timing-function: linear;
-  transition-timing-function: linear;
+  -webkit-transition-property: opacity 0.2s linear;
+  -moz-transition-property: opacity 0.2s linear;
+  -o-transition-property: opacity 0.2s linear;
+  transition-property: opacity 0.2s linear;
 }
 .footer-nav__logo:hover {
   opacity: 0.8;
