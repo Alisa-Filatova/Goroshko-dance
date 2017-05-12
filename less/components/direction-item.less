@@ -139,11 +139,11 @@
         justify-content: center;
         text-align: center;
         background-image: none;
-        background-color: @grey;
-        width: auto;
+        width: 90%;;
         height: auto;
-        padding-bottom: 30px;
-        padding-top: 30px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-bottom: 0;
 
         &::after {
             display: none;
@@ -152,16 +152,25 @@
         &__btn {
             transform: none;
             position: static;
+            width: 100%;
+            padding: 8px 30px;
+            border-radius: 3px;
         }
 
         &__description {
             margin-bottom: 20px;
-            max-width: 354px;
-            margin-left: 10px;
+            min-width: 315px;
+            font-size: 0.8em;
+            line-height: 1.5em;
         }
 
         &__title {
             line-height: 1.2em;
+            font-size: 1.5em;
+        }
+
+        &__wrapper {
+            margin-top: 10px;
         }
     }
 }

@@ -53,13 +53,14 @@
 @media(max-width:@screen_mobile) {
 
     .page-header {
-        padding-bottom: 290px;
-        background-image: url('../img/white-cover.svg');
-        background-size: 110%;
-        background-attachment: scroll;
+        padding-top: 220px;
+        padding-bottom: 100px;
+        background-image: url('../img/main-mobile.jpg');
+        background-size: cover;
 
         &__logo {
             width: 71%;
+            height: 96%;
             left: 51px;
             top: 13px;
         }
@@ -216,7 +217,7 @@
 @media(max-width:@screen_mobile) {
 
     .main-nav {
-         background-size: 234%;
+         background-size: 266%;
 
         &__menu-open {
             width: 48px;
@@ -226,11 +227,11 @@
         }
 
         &__items_show {
-            top: 42px;
+            top: 38px;
         }
 
         &__link {
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
     }
 }
@@ -348,22 +349,38 @@
             width: 287px;
             height: 219px;
             opacity: 0.1;
-            top: 128px;
+            top: 18px;
             animation: none;
         }
 
         &__title {
-            font-size: 1.4em;
-            line-height: 1.5em;
+            font-size: 1.3em;
+            line-height: 1.4em;
             text-align: center;
-            margin-left: 7px;
         }
 
         &__description {
-            font-size: 0.86em;
+            font-size: 0.8em;
             margin-top: 0;
             margin-bottom: 0;
             text-align: center;
+        }
+
+        &__wrapper {
+            align-items: center;
+        }
+    }
+}
+
+@media(max-width:350px) {
+
+    .promo {
+        &__title {
+            font-size: 1.17em;
+        }
+
+        &__description {
+            font-size: 0.71em;
         }
     }
 }
@@ -461,20 +478,27 @@
 @media(max-width:@screen_mobile) {
 
     .about-me {
-        padding-top: 57px;
-        background-size: 227%;
+        padding-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
 
         &__title {
-            margin-top: 20px;
+            margin-top: 10px;
+            font-size: 1.4em;
+            line-height: 1.4em;
         }
 
         &__heading {
             margin-top: 0;
+            transform: none;
+            text-align: center;
+            width: 100%;
         }
 
         &__photo {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             order: 1;
             border-radius: 50%;
             margin-right: 0;
@@ -485,6 +509,12 @@
             order: 2;
             margin-left: 0;
             margin-right: 0;
+            padding: 0 10px;
+        }
+
+        &__text {
+            font-size: 0.8em;
+            line-height: 1.5em;
         }
 
         &__wrapper {
@@ -493,7 +523,6 @@
             box-shadow: none;
             text-align: center;
             margin-top: 15px;
-            padding-bottom: 22px;
         }
     }
 }
@@ -543,10 +572,15 @@
 @media(max-width:@screen_mobile) {
 
     .directions {
-        background-size: 226%;
+        background-image: none;
+        padding-left: 0;
+        padding-right: 0;
 
         &__heading {
             margin-left: 0;
+            transform: rotate(0);
+            text-align: center;
+            background-color: @purple;
         }
 
         &__wrapper {
@@ -608,7 +642,9 @@
     }
 
     &__heading {
-        transform: rotate(-4deg);
+        transform: rotate(0);
+        text-align: center;
+        width: 100%;
     }
 
     &__btn {
@@ -650,13 +686,16 @@
 @media(max-width:@screen_mobile) {
 
     .video {
-        background-size: 181%;
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
 
         &__btn {
             padding: 0px 8px;
             padding-bottom: 0px;
-            bottom: -4px;
-            left: 206px;
+            bottom: -5px;
+            left: 7px;
+            margin-top: 14px;
 
             &::after {
                 display: none;
@@ -705,14 +744,22 @@
     .timetable {
         padding-top: 4px;
         padding-bottom: 20px;
-        background-size: 223%;
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
+        text-align: center;
+
+        &__heading {
+            transform: rotate(0);
+            background-color: @purple;
+        }
     }
 }
 
 .contacts {
     .container();
     background-color: @white;
-    background-image: url('../img/pink-back-rotate.svg');
+    background-image: none;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 102%;
@@ -721,7 +768,8 @@
     padding-bottom: 25px;
 
     &__heading {
-        transform: rotate(-4deg);
+        transform: rotate(0);
+        text-align: center;
     }
 
     &__wrapper {
@@ -766,16 +814,34 @@
 
     .contacts {
         padding-top: 2px;
-        padding-bottom: 20px;
-        background-size: 225%;
+        padding-left: 0;
+        padding-right: 0;
 
         &__wrapper {
             margin-top: 35px;
         }
 
+        &__item {
+            margin-bottom: 10px;
+        }
+
         &__items {
             max-width: 325px;
             margin: 0 auto;
+            font-size: 0.8em;
+        }
+
+        &__map {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width:350px) {
+
+    .contacts {
+        &__items {
+            padding-left: 20px;
         }
     }
 }
@@ -836,10 +902,11 @@
     }
 }
 
-@media(max-width:@screen_tablet) {
+@media(max-width:@screen_mobile) {
     .footer {
         padding-top: 1px;
         padding-bottom: 15px;
+        background-image: none;
     }
 }
 
@@ -903,7 +970,7 @@
 
         &__items {
             flex-wrap: nowrap;
-            min-width: 794px;
+            min-width: 685px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -913,7 +980,7 @@
 @media(max-width:@screen_mobile) {
 
     .footer-nav {
-        margin-top: 50px;
+        margin-top: 27px;
 
         &__items {
             flex-wrap: wrap;
