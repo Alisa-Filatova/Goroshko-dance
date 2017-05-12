@@ -871,9 +871,14 @@ body {
   .modal-post-form__title {
     margin-left: 0;
     font-size: 1.15em;
+    margin-bottom: 20px;
   }
   .modal-post-form__items {
     margin-bottom: 0;
+    margin-top: 0;
+  }
+  .modal-post-form__wrapper {
+    text-align: left;
   }
 }
 .modal-post-form_show {
