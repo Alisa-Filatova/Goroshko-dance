@@ -715,6 +715,12 @@ body {
     line-height: 1.7em;
   }
 }
+@media (max-width: 320px) {
+  .table__correction {
+    font-size: 1em;
+    line-height: 1.7em;
+  }
+}
 .close-cross {
   border: none;
   background-color: transparent;
@@ -1029,6 +1035,12 @@ body {
   }
   .direction-item__wrapper {
     margin-top: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .direction-item__description {
+    max-width: 281px;
+    min-width: auto;
   }
 }
 .social-item__link {
@@ -1859,7 +1871,7 @@ body {
     padding-right: 0;
   }
   .contacts__wrapper {
-    margin-top: 35px;
+    margin-top: 10px;
   }
   .contacts__item {
     margin-bottom: 10px;
