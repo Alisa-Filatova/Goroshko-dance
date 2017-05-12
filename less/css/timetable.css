@@ -1,0 +1,143 @@
+.table {
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+  color: #757575;
+  text-align: center;
+  font-size: 1.05em;
+  margin: auto;
+  margin-top: 110px;
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+}
+.table tr:nth-child(even) {
+  background-color: #e3e3e3;
+}
+.table__heading {
+  color: #ffffff;
+  font-weight: 400;
+  width: 226px;
+  border-right: 20px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.table__heading_logo {
+  width: 290px;
+}
+.table__heading_day,
+.table__heading_place {
+  background-color: #e23a59;
+}
+.table__heading_time,
+.table__heading_age {
+  background-color: #272961;
+}
+.table__btn {
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.table__cell {
+  border-right: 20px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  padding: 8px 10px;
+}
+.table__icon {
+  width: 65px;
+  height: 56px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.table__icon_calendar {
+  background-image: url('../img/calendar.svg');
+}
+.table__icon_time {
+  background-image: url('../img/time.svg');
+}
+.table__icon_marker {
+  background-image: url('../img/marker.svg');
+}
+.table__icon_people {
+  background-image: url('../img/people.svg');
+}
+.table__correction {
+  color: #757575;
+  font-size: 0.9em;
+  word-spacing: 4px;
+}
+.table__correction_attention {
+  color: #e23a59;
+  font-weight: 700;
+}
+.table::before {
+  content: '*';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: -35px;
+  font-size: 6em;
+  font-weight: 700;
+  color: #e23a59;
+}
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.95em;
+    margin-top: 70px;
+  }
+  .table__cell {
+    border-right: none;
+    padding: 8px 0;
+  }
+  .table__heading {
+    padding-bottom: 0;
+    border-right: none;
+  }
+  .table__correction {
+    text-align: center;
+  }
+}
+@media (max-width: 510px) {
+  .table {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    margin-top: 38px;
+  }
+  .table__heading {
+    padding-top: 0;
+    font-size: 0;
+    width: 94px;
+  }
+  .table__logo {
+    width: 83%;
+    height: auto;
+    margin-top: 11px;
+  }
+  .table__icon {
+    width: 26px;
+    height: 29px;
+    margin-top: 5px;
+    margin-bottom: -25px;
+  }
+  .table::before {
+    font-size: 4em;
+    top: -15px;
+  }
+  .table__correction {
+    line-height: 1.7em;
+    min-width: 273px;
+    max-width: 337px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 320px) {
+  .table__correction {
+    font-size: 0.8em;
+    max-width: 273px;
+  }
+}
