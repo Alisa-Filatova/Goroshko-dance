@@ -37,15 +37,17 @@
 @media(max-width:@screen_tablet) {
 
     .page-header {
-        padding-bottom: 130px;
+        padding-top: 236px;
+        padding-bottom: 222px;
         background-image: url('../img/white-cover.svg'), url('../img/main-tablet.jpg');
-        background-size: 101%, 943px auto;
+        background-size: 102%, cover;
         background-attachment: scroll;
 
         &__logo {
-            width: 370px;
-            left: 144px;
-            top: 49px;
+            width: 60%;
+            height: 60%;
+            left: 136px;
+            top: 124px;
         }
     }
 }
@@ -150,7 +152,7 @@
 @media(max-width:@screen_tablet) {
 
     .main-nav {
-        background-size: 234%;
+        background-size: cover;
 
         &__items {
             display: none;
@@ -304,9 +306,9 @@
         padding-top: 65px;
         padding-bottom: 0;
         background-image: url('../img/promo-tablet.png');
-        background-position-x: 96%;
-        background-position-y: 28%;
-        background-size: 45%;
+        background-position-x: 100%;
+        background-position-y: 67%;
+        background-size: 41%;
         background-attachment: scroll;
 
         &__title {
@@ -315,10 +317,6 @@
 
         &__wrapper {
             margin-left: 0;
-        }
-
-        &__description {
-            font-size: 19px;
         }
 
         &::after {
@@ -452,25 +450,27 @@
         padding-top: 11px;
 
         &__photo {
-            width: 350px;
-            height: 450px;
+            width: 100%;
             order: 2;
             border-radius: 0;
-            margin-right: -58px;
-            background-image: url('../img/about-tablet.jpg');
         }
 
         &__wrapper {
-            flex-flow: row nowrap;
             padding-top: 0;
             padding-bottom: 0;
             background-image: none;
+            justify-content: center;
+            box-shadow: none;
+        }
+
+        &__heading {
+            margin-top: 42px;
         }
 
         &__description {
-            max-width: 609px;
-            margin-left: -44px;
+            max-width: 100%;
             margin-right: 0;
+            text-align: center;
         }
     }
 }
@@ -510,6 +510,7 @@
             margin-left: 0;
             margin-right: 0;
             padding: 0 10px;
+            max-width: 98%;
         }
 
         &__text {
@@ -559,7 +560,6 @@
 
         &__heading {
             transform: rotate(-3deg);
-            margin-left: -40px;
         }
 
         &__wrapper {
@@ -641,12 +641,6 @@
         }
     }
 
-    &__heading {
-        transform: rotate(0);
-        text-align: center;
-        width: 100%;
-    }
-
     &__btn {
         padding: 3px 20px;
         padding-bottom: 4px;
@@ -664,6 +658,10 @@
             top: 0;
             right: -42px;
         }
+    }
+
+    &__heading {
+        transform: rotate(-4deg);
     }
 }
 
@@ -711,6 +709,12 @@
             justify-content: flex-end;
             margin-top: 3px;
         }
+
+        &__heading {
+            transform: rotate(0);
+            text-align: center;
+            width: 100%;
+        }
     }
 }
 
@@ -732,9 +736,11 @@
 @media(max-width:@screen_tablet) {
     .timetable {
         padding-top: 4px;
+        text-align: center;
 
         &__heading {
             transform: rotate(-4deg);
+            text-align: left;
         }
     }
 }
@@ -747,11 +753,11 @@
         padding-left: 0;
         padding-right: 0;
         background-image: none;
-        text-align: center;
 
         &__heading {
             transform: rotate(0);
             background-color: @purple;
+            text-align: center;
         }
     }
 }
@@ -759,7 +765,7 @@
 .contacts {
     .container();
     background-color: @white;
-    background-image: none;
+    background-image: url('../img/pink-back-rotate.svg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 102%;
@@ -768,16 +774,15 @@
     padding-bottom: 25px;
 
     &__heading {
-        transform: rotate(0);
-        text-align: center;
+        transform: rotate(-3deg);
     }
 
     &__wrapper {
         display: flex;
         flex-flow: row wrap;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
-        margin-top: 140px;
+        margin-top: 96px;
     }
 
     &__items {
@@ -799,13 +804,18 @@
     .contacts {
         padding-top: 2px;
         padding-bottom: 0;
+        margin-top: 18px;
 
         &__wrapper {
-            margin-top: 75px;
+            margin-top: 42px;
         }
 
         &__items {
             max-width: 320px;
+        }
+
+        &__item {
+            margin-bottom: 23px;
         }
     }
 }
@@ -816,6 +826,8 @@
         padding-top: 2px;
         padding-left: 0;
         padding-right: 0;
+        background-image: none;
+        margin-top: 0;
 
         &__wrapper {
             margin-top: 10px;
@@ -828,11 +840,17 @@
         &__items {
             max-width: 325px;
             margin: 0 auto;
+            text-align: center;
             font-size: 0.8em;
         }
 
         &__map {
             width: 100%;
+        }
+
+        &__heading {
+            transform: rotate(0);
+            text-align: center;
         }
     }
 }
@@ -841,7 +859,7 @@
 
     .contacts {
         &__items {
-            padding-left: 20px;
+            max-width: 294px;
         }
     }
 }
@@ -966,11 +984,11 @@
 
     .footer-nav {
         justify-content: space-around;
-        margin-top: 88px;
+        margin-top: 57px;
 
         &__items {
             flex-wrap: nowrap;
-            min-width: 685px;
+            min-width: 97%;
             margin-top: 20px;
             margin-bottom: 20px;
         }

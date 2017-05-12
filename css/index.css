@@ -60,12 +60,12 @@ body {
 @media (max-width: 768px) {
   body {
     min-width: 768px;
+    background-color: #ffffff;
   }
 }
 @media (max-width: 420px) {
   body {
     min-width: 320px;
-    background-color: #ffffff;
   }
 }
 .page-heading {
@@ -711,14 +711,17 @@ body {
     top: -15px;
   }
   .table__correction {
-    font-size: 0.8em;
     line-height: 1.7em;
+    min-width: 273px;
+    max-width: 337px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (max-width: 320px) {
   .table__correction {
-    font-size: 1em;
-    line-height: 1.7em;
+    font-size: 0.8em;
+    max-width: 273px;
   }
 }
 .close-cross {
@@ -829,6 +832,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+  text-align: left;
 }
 .modal-post-form__items {
   flex-basis: 250px;
@@ -863,6 +867,9 @@ body {
   .modal-post-form {
     margin-left: -332px;
   }
+  .modal-post-form__title {
+    margin-left: 0;
+  }
 }
 @media (max-width: 420px) {
   .modal-post-form {
@@ -875,16 +882,12 @@ body {
     background-image: linear-gradient(180deg, #ffffff 98%, #e23a59 20%);
   }
   .modal-post-form__title {
-    margin-left: 0;
     font-size: 1.15em;
     margin-bottom: 20px;
   }
   .modal-post-form__items {
     margin-bottom: 0;
     margin-top: 0;
-  }
-  .modal-post-form__wrapper {
-    text-align: left;
   }
 }
 .modal-post-form_show {
@@ -980,6 +983,7 @@ body {
   .direction-item {
     background-image: linear-gradient(to right, transparent 14%, #f2f2f2 14%);
     height: 292px;
+    width: 90%;
   }
   .direction-item__photo {
     width: 185px;
@@ -989,16 +993,16 @@ body {
   .direction-item::after {
     width: 148px;
     height: 345px;
-    left: -40px;
+    left: -61px;
     top: -2px;
   }
   .direction-item__btn {
-    width: 211px;
+    width: 292px;
     right: -173px;
-    top: 119px;
+    top: 120px;
   }
   .direction-item__description {
-    max-width: 488px;
+    max-width: 420px;
   }
 }
 @media (max-width: 420px) {
@@ -1087,13 +1091,13 @@ body {
 }
 @import '../variables/';
 .map {
-  width: 711px;
-  height: 326px;
+  width: 685px;
+  height: 408px;
 }
 @media (max-width: 768px) {
   .map {
-    width: 420px;
-    height: 400px;
+    width: 343px;
+    height: 383px;
   }
 }
 @media (max-width: 420px) {
@@ -1117,7 +1121,7 @@ body {
 }
 @media (max-width: 768px) {
   .page-header {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1137,15 +1141,17 @@ body {
 }
 @media (max-width: 768px) {
   .page-header {
-    padding-bottom: 130px;
+    padding-top: 236px;
+    padding-bottom: 222px;
     background-image: url('../img/white-cover.svg'), url('../img/main-tablet.jpg');
-    background-size: 101%, 943px auto;
+    background-size: 102%, cover;
     background-attachment: scroll;
   }
   .page-header__logo {
-    width: 370px;
-    left: 144px;
-    top: 49px;
+    width: 60%;
+    height: 60%;
+    left: 136px;
+    top: 124px;
   }
 }
 @media (max-width: 420px) {
@@ -1229,7 +1235,7 @@ body {
 }
 @media (max-width: 768px) {
   .main-nav {
-    background-size: 234%;
+    background-size: cover;
   }
   .main-nav__items {
     display: none;
@@ -1316,7 +1322,7 @@ body {
 }
 @media (max-width: 768px) {
   .promo {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1374,9 +1380,9 @@ body {
     padding-top: 65px;
     padding-bottom: 0;
     background-image: url('../img/promo-tablet.png');
-    background-position-x: 96%;
-    background-position-y: 28%;
-    background-size: 45%;
+    background-position-x: 100%;
+    background-position-y: 67%;
+    background-size: 41%;
     background-attachment: scroll;
   }
   .promo__title {
@@ -1384,9 +1390,6 @@ body {
   }
   .promo__wrapper {
     margin-left: 0;
-  }
-  .promo__description {
-    font-size: 19px;
   }
   .promo::after {
     width: 150px;
@@ -1451,7 +1454,7 @@ body {
 }
 @media (max-width: 768px) {
   .about-me {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1511,23 +1514,24 @@ body {
     padding-top: 11px;
   }
   .about-me__photo {
-    width: 350px;
-    height: 450px;
+    width: 100%;
     order: 2;
     border-radius: 0;
-    margin-right: -58px;
-    background-image: url('../img/about-tablet.jpg');
   }
   .about-me__wrapper {
-    flex-flow: row nowrap;
     padding-top: 0;
     padding-bottom: 0;
     background-image: none;
+    justify-content: center;
+    box-shadow: none;
+  }
+  .about-me__heading {
+    margin-top: 42px;
   }
   .about-me__description {
-    max-width: 609px;
-    margin-left: -44px;
+    max-width: 100%;
     margin-right: 0;
+    text-align: center;
   }
 }
 @media (max-width: 420px) {
@@ -1561,6 +1565,7 @@ body {
     margin-left: 0;
     margin-right: 0;
     padding: 0 10px;
+    max-width: 98%;
   }
   .about-me__text {
     font-size: 0.8em;
@@ -1588,7 +1593,7 @@ body {
 }
 @media (max-width: 768px) {
   .directions {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1616,7 +1621,6 @@ body {
   }
   .directions__heading {
     transform: rotate(-3deg);
-    margin-left: -40px;
   }
   .directions__wrapper {
     margin-top: 54px;
@@ -1653,7 +1657,7 @@ body {
 }
 @media (max-width: 768px) {
   .video {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1698,11 +1702,6 @@ body {
 .video__link-item:active {
   opacity: 0.3;
 }
-.video__heading {
-  transform: rotate(0);
-  text-align: center;
-  width: 100%;
-}
 .video__btn {
   padding: 3px 20px;
   padding-bottom: 4px;
@@ -1719,6 +1718,9 @@ body {
   position: absolute;
   top: 0;
   right: -42px;
+}
+.video__heading {
+  transform: rotate(-4deg);
 }
 @media (max-width: 768px) {
   .video {
@@ -1756,6 +1758,11 @@ body {
     justify-content: flex-end;
     margin-top: 3px;
   }
+  .video__heading {
+    transform: rotate(0);
+    text-align: center;
+    width: 100%;
+  }
 }
 .timetable {
   width: 1440px;
@@ -1771,7 +1778,7 @@ body {
 }
 @media (max-width: 768px) {
   .timetable {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1787,9 +1794,11 @@ body {
 @media (max-width: 768px) {
   .timetable {
     padding-top: 4px;
+    text-align: center;
   }
   .timetable__heading {
     transform: rotate(-4deg);
+    text-align: left;
   }
 }
 @media (max-width: 420px) {
@@ -1799,11 +1808,11 @@ body {
     padding-left: 0;
     padding-right: 0;
     background-image: none;
-    text-align: center;
   }
   .timetable__heading {
     transform: rotate(0);
     background-color: #272961;
+    text-align: center;
   }
 }
 .contacts {
@@ -1811,7 +1820,7 @@ body {
   padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
-  background-image: none;
+  background-image: url('../img/pink-back-rotate.svg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 102%;
@@ -1821,7 +1830,7 @@ body {
 }
 @media (max-width: 768px) {
   .contacts {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1832,15 +1841,14 @@ body {
   }
 }
 .contacts__heading {
-  transform: rotate(0);
-  text-align: center;
+  transform: rotate(-3deg);
 }
 .contacts__wrapper {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 140px;
+  margin-top: 96px;
 }
 .contacts__items {
   max-width: 560px;
@@ -1856,12 +1864,16 @@ body {
   .contacts {
     padding-top: 2px;
     padding-bottom: 0;
+    margin-top: 18px;
   }
   .contacts__wrapper {
-    margin-top: 75px;
+    margin-top: 42px;
   }
   .contacts__items {
     max-width: 320px;
+  }
+  .contacts__item {
+    margin-bottom: 23px;
   }
 }
 @media (max-width: 420px) {
@@ -1869,6 +1881,8 @@ body {
     padding-top: 2px;
     padding-left: 0;
     padding-right: 0;
+    background-image: none;
+    margin-top: 0;
   }
   .contacts__wrapper {
     margin-top: 10px;
@@ -1879,15 +1893,20 @@ body {
   .contacts__items {
     max-width: 325px;
     margin: 0 auto;
+    text-align: center;
     font-size: 0.8em;
   }
   .contacts__map {
     width: 100%;
   }
+  .contacts__heading {
+    transform: rotate(0);
+    text-align: center;
+  }
 }
 @media (max-width: 350px) {
   .contacts__items {
-    padding-left: 20px;
+    max-width: 294px;
   }
 }
 .footer {
@@ -1904,7 +1923,7 @@ body {
 }
 @media (max-width: 768px) {
   .footer {
-    width: 768px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -2004,11 +2023,11 @@ body {
 @media (max-width: 768px) {
   .footer-nav {
     justify-content: space-around;
-    margin-top: 88px;
+    margin-top: 57px;
   }
   .footer-nav__items {
     flex-wrap: nowrap;
-    min-width: 685px;
+    min-width: 97%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
