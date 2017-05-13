@@ -58,10 +58,24 @@
         background-attachment: scroll;
 
         &__logo {
-            width: 60%;
-            height: 60%;
-            left: 136px;
-            top: 124px;
+            width: 71%;
+            height: 96%;
+            left: 83px;
+            top: 41px;
+        }
+    }
+}
+
+@media(max-width: 545px) {
+    .page-header {
+        padding-top: 343px;
+        padding-bottom: 121px;
+
+        &__logo {
+            width: 71%;
+            height: 96%;
+            left: 51px;
+            top: 13px;
         }
     }
 }
@@ -447,6 +461,8 @@
     background-size: 102%;
     padding-top: 70px;
     padding-bottom: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     &__heading {
         text-align: right;
@@ -487,7 +503,7 @@
 
     &__description {
         max-width: 544px;
-        margin-right: 28px;
+        margin-right: 56px;
         margin-left: 30px;
     }
 
@@ -1059,6 +1075,13 @@
     }
 }
 
+@media(max-width:@screen_laptop) {
+    .footer {
+        background-image: none;
+        padding-top: 0px;
+    }
+}
+
 @media(max-width:@screen_tablet) {
     .footer {
         padding-top: 34px;
@@ -1127,7 +1150,7 @@
 @media(max-width: 1180px) {
 
     .footer-nav {
-        margin-top: 33px;
+        margin-top: 0;
     }
 }
 
