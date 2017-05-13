@@ -118,8 +118,9 @@
 @media(max-width:@screen_tablet) {
 
     .direction-item {
-        background-image: linear-gradient(to right, transparent 14%, @grey 14%);
+        background-image: none;
         height: 292px;
+        background-color: #ffffff;
         width: 90%;
 
         &__photo {
@@ -129,16 +130,14 @@
         }
 
         &::after {
-            width: 148px;
-            height: 345px;
-            left: -61px;
-            top: -2px;
+            display: none;
         }
 
         &__btn {
             width: 292px;
             right: -173px;
             top: 120px;
+            display: none;
         }
 
         &__description {
@@ -151,7 +150,7 @@
     }
 }
 
-@media(max-width: 742px) {
+@media(max-width: 680px) {
 
     .direction-item {
         flex-direction: column;
@@ -163,11 +162,8 @@
         padding-bottom: 10px;
         padding-top: 10px;
 
-         &::after {
-            display: none;
-        }
-
         &__btn {
+            display: inline-block;
             transform: none;
             position: static;
             width: 80%;
@@ -176,8 +172,10 @@
         }
 
         &__description {
-            max-width: 100%;
+            max-width: 90%;
             margin-bottom: 20px;
+            margin-right: auto;
+            margin-left: auto;
         }
 
         &__title {
