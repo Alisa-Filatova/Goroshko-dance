@@ -101,13 +101,18 @@
     }
 }
 
-@media(max-width:@screen_laptop) {
+@media(max-width: 1210px) {
     .direction-item {
         width: 100%;
 
         &::after {
-            left: -38px;
+            display: none;
         }
+    }
+}
+
+@media(max-width:@screen_laptop) {
+    .direction-item {
 
         &__description {
             max-width: 583px;
@@ -115,7 +120,7 @@
     }
 }
 
-@media(max-width:@screen_tablet) {
+@media(max-width: 960px) {
 
     .direction-item {
         background-image: none;
@@ -127,10 +132,6 @@
             width: 185px;
             height: 185px;
             margin-left: -18px;
-        }
-
-        &::after {
-            display: none;
         }
 
         &__btn {
