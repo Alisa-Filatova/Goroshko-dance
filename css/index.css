@@ -1142,7 +1142,7 @@ body {
 }
 .page-header {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   position: relative;
   background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
@@ -1368,7 +1368,7 @@ body {
 }
 .promo {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/promo-desktop.png');
@@ -1527,7 +1527,7 @@ body {
 }
 .about-me {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/pink-back.svg');
@@ -1608,7 +1608,7 @@ body {
 }
 @media (max-width: 1180px) {
   .about-me__wrapper {
-    margin-top: 0;
+    margin-top: 20px;
     padding-top: 44px;
     padding-bottom: 0;
     background-image: none;
@@ -1645,6 +1645,7 @@ body {
     border-radius: 0;
   }
   .about-me__wrapper {
+    margin-top: 10px;
     padding-top: 0;
     justify-content: center;
     flex-wrap: wrap;
@@ -1708,7 +1709,7 @@ body {
 }
 .directions {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/purple-back.svg');
@@ -1777,7 +1778,7 @@ body {
 }
 .video {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/pink-back-rotate.svg');
@@ -1913,7 +1914,7 @@ body {
 }
 .timetable {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/purple-back.svg');
@@ -1965,7 +1966,7 @@ body {
 }
 .contacts {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/pink-back-rotate.svg');
@@ -2072,7 +2073,7 @@ body {
 }
 .footer {
   max-width: 1440px;
-  padding: 0 5%;
+  padding: 0 80px;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/footer.svg');
