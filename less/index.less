@@ -33,6 +33,20 @@
     }
 }
 
+@media(max-width:@screen_laptop) {
+    .page-header {
+        background-size: 101%, cover;
+        background-attachment: scroll;
+        padding-top: 240px;
+        padding-bottom: 330px;
+
+        &__logo {
+            left: 25%;
+            top: 25%;
+        }
+    }
+}
+
 
 @media(max-width:@screen_tablet) {
 
@@ -148,11 +162,26 @@
     }
 }
 
+@media(max-width: 1180px) {
+
+    .main-nav {
+        background-size: cover;
+
+        &__items {
+            margin-right: 0;
+            justify-content: space-around;
+        }
+
+        &__social-items {
+            margin-left: 0;
+        }
+    }
+}
+
 
 @media(max-width:@screen_tablet) {
 
     .main-nav {
-        background-size: cover;
 
         &__items {
             display: none;
@@ -300,6 +329,21 @@
     }
 }
 
+@media(max-width: 1180px) {
+
+    .promo {
+        background-position-x: 100%;
+        background-position-y: 55%;
+        background-size: 46%;
+        padding-top: 82px;
+        padding-bottom: 0;
+
+        &__wrapper {
+            margin-left: 0;
+        }
+    }
+}
+
 @media(max-width:@screen_tablet) {
 
     .promo {
@@ -337,6 +381,11 @@
 
     .promo {
         background-image: none;
+
+        &__wrapper {
+            align-items: center;
+            text-align: center;
+        }
 
         &::before {
             display: none;
@@ -408,7 +457,7 @@
 
     &__wrapper {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         padding-top: 50px;
@@ -452,26 +501,57 @@
     }
 }
 
+@media(max-width: 1180px) {
+    .about-me {
+
+        &__wrapper {
+            margin-top: 0;
+            padding-top: 44px;
+            padding-bottom: 0;
+            background-image: none;
+            box-shadow: none;
+        }
+
+        &__photo {
+            width: 325px;
+            height: 480px;
+            border-radius: 0;
+        }
+
+        &__description {
+            margin-right: 0;
+        }
+
+        &__heading {
+            margin-top: 10px;
+        }
+
+    }
+}
+
 @media(max-width:@screen_tablet) {
     .about-me {
         padding-top: 11px;
 
         &__photo {
             width: 100%;
+            height: 650px;
             order: 2;
             border-radius: 0;
         }
 
         &__wrapper {
             padding-top: 0;
-            padding-bottom: 0;
-            background-image: none;
             justify-content: center;
-            box-shadow: none;
+            flex-wrap: wrap;
         }
 
         &__heading {
             margin-top: 42px;
+        }
+
+        &__title {
+            margin-top: 25px;
         }
 
         &__description {
@@ -568,6 +648,13 @@
         justify-content: center;
         align-items: center;
         margin-right: 46px;
+    }
+}
+
+@media(max-width:@screen_laptop) {
+
+    .directions {
+        padding-top: 6px;
     }
 }
 
@@ -683,6 +770,21 @@
     }
 }
 
+@media(max-width:@screen_laptop) {
+
+    .video {
+        padding-top: 15px;
+
+        &__links {
+            margin-top: 12px;
+        }
+
+        &__btn {
+            bottom: -53px;
+        }
+    }
+}
+
 @media(max-width:@screen_tablet) {
 
     .video {
@@ -748,6 +850,12 @@
 
     &__heading {
         transform: rotate(-3deg);
+    }
+}
+
+@media(max-width:@screen_laptop) {
+    .timetable {
+        padding-top: 10px;
     }
 }
 
@@ -824,6 +932,27 @@
     }
 }
 
+@media(max-width: 1180px) {
+    .contacts {
+
+        &__wrapper {
+            flex-flow: row wrap;
+            justify-content: center;
+            margin-top: 78px;
+            text-align: center;
+        }
+
+        &__items {
+            max-width: 100%;
+        }
+
+        &__map {
+            width: 100%;
+        }
+    }
+}
+
+
 @media(max-width:@screen_tablet) {
 
     .contacts {
@@ -835,10 +964,6 @@
             margin-top: 42px;
         }
 
-        &__items {
-            max-width: 320px;
-        }
-
         &__item {
             margin-bottom: 23px;
         }
@@ -848,12 +973,8 @@
 @media(max-width: 742px) {
 
     .contacts {
-        &__map {
-            width: 100%;
-        }
 
         &__items {
-            max-width: 100%;
             text-align: center;
             margin: 0 auto;
         }
@@ -1013,6 +1134,13 @@
         &:active {
             opacity: 0.5;
         }
+    }
+}
+
+@media(max-width: 1180px) {
+
+    .footer-nav {
+        margin-top: 33px;
     }
 }
 

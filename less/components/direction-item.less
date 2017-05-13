@@ -101,6 +101,20 @@
     }
 }
 
+@media(max-width:@screen_laptop) {
+    .direction-item {
+        width: 100%;
+
+        &::after {
+            left: -38px;
+        }
+
+        &__description {
+            max-width: 583px;
+        }
+    }
+}
+
 @media(max-width:@screen_tablet) {
 
     .direction-item {
@@ -129,6 +143,10 @@
 
         &__description {
             max-width: 420px;
+        }
+
+        &__title {
+            font-size: 1.5em;
         }
     }
 }
