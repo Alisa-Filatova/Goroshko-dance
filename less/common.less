@@ -2,30 +2,30 @@
 @import 'variables';
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 body {
     position: relative;
+    min-width: 320px;
+    margin: 0 auto;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
     line-height: 1.65em;
-    min-width: 320px;
     color: #110a0a;
     background-color: @grey;
     text-align: left;
-    margin: 0 auto;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-  body {
-     background-color: @white;
-  }
+@media (max-width: @screen_tablet) {
+    body {
+        background-color: @white;
+    }
 }
 
 .page-heading {
@@ -65,5 +65,3 @@ body {
         color: @purple;
     }
 }
-
-
