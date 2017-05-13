@@ -49,7 +49,7 @@ body {
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.65em;
-  min-width: 1440px;
+  min-width: 320px;
   color: #110a0a;
   background-color: #f2f2f2;
   text-align: left;
@@ -59,13 +59,7 @@ body {
 }
 @media (max-width: 768px) {
   body {
-    min-width: 426px;
     background-color: #ffffff;
-  }
-}
-@media (max-width: 425px) {
-  body {
-    min-width: 320px;
   }
 }
 .page-heading {
@@ -1129,8 +1123,8 @@ body {
   }
 }
 .page-header {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   position: relative;
   background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
@@ -1330,8 +1324,8 @@ body {
   }
 }
 .promo {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/promo-desktop.png');
@@ -1468,8 +1462,8 @@ body {
   }
 }
 .about-me {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/pink-back.svg');
@@ -1614,8 +1608,8 @@ body {
   }
 }
 .directions {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/purple-back.svg');
@@ -1678,8 +1672,8 @@ body {
   }
 }
 .video {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/pink-back-rotate.svg');
@@ -1799,8 +1793,8 @@ body {
   }
 }
 .timetable {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/purple-back.svg');
@@ -1855,8 +1849,8 @@ body {
   }
 }
 .contacts {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/pink-back-rotate.svg');
@@ -1954,8 +1948,8 @@ body {
   }
 }
 .footer {
-  width: 1440px;
-  padding: 0 80px;
+  max-width: 1440px;
+  padding: 0 5%;
   margin: 0 auto;
   background-color: #ffffff;
   background-image: url('../img/footer.svg');
