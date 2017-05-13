@@ -658,6 +658,16 @@ body {
   font-weight: 700;
   color: #e23a59;
 }
+@media (max-width: 1180px) {
+  .table__heading {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+  }
+  .table__cell {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+  }
+}
 @media (max-width: 768px) {
   .table {
     font-size: 0.95em;
@@ -849,9 +859,16 @@ body {
   margin-right: 20px;
   margin-top: 17px;
 }
+@media only screen and (orientation: landscape) {
+  .modal-post-form {
+    position: absolute;
+    top: 77%;
+  }
+}
 @media (max-width: 768px) {
   .modal-post-form {
     margin-left: -42%;
+    position: absolute;
     top: 77%;
   }
   .modal-post-form__title {
@@ -1193,10 +1210,10 @@ body {
 }
 @media (max-width: 768px) {
   .page-header {
-    padding-top: 236px;
+    padding-top: 311px;
     padding-bottom: 222px;
-    background-image: url('../img/white-cover.svg'), url('../img/main-tablet.jpg');
-    background-size: 102%, cover;
+    background-image: url('../img/main-tablet.jpg');
+    background-size: cover;
     background-attachment: scroll;
   }
   .page-header__logo {
@@ -1211,7 +1228,6 @@ body {
     padding-top: 220px;
     padding-bottom: 100px;
     background-image: url('../img/main-mobile.jpg');
-    background-size: cover;
   }
   .page-header__logo {
     width: 71%;
@@ -1297,7 +1313,7 @@ body {
     margin-left: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 832px) {
   .main-nav__items {
     display: none;
   }
@@ -1453,7 +1469,7 @@ body {
     margin-left: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 832px) {
   .promo {
     padding-top: 65px;
     padding-bottom: 0;
@@ -1592,6 +1608,7 @@ body {
 .about-me__description {
   max-width: 544px;
   margin-right: 28px;
+  margin-left: 30px;
 }
 .about-me__title {
   font-size: 1.8em;
@@ -1600,6 +1617,12 @@ body {
   font-weight: 400;
   color: #0f1014;
   margin: 0;
+}
+@media (max-width: 1280px) {
+  .about-me__photo {
+    width: 550px;
+    height: 550px;
+  }
 }
 @media (max-width: 1180px) {
   .about-me__wrapper {

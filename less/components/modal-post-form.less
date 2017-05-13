@@ -64,11 +64,17 @@
         margin-right: 20px;
         margin-top: 17px;
     }
+
+    @media only screen and (orientation:landscape) {
+        position: absolute;
+        top: 77%;
+    }
 }
 
 @media(max-width:@screen_tablet) {
     .modal-post-form {
         margin-left: -42%;
+        position: absolute;
         top: 77%;
 
         &__title {
