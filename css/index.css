@@ -2003,6 +2003,7 @@ body {
 }
 .contacts__heading {
   transform: rotate(-3deg);
+  margin-top: 10px;
 }
 .contacts__wrapper {
   display: flex;
@@ -2033,6 +2034,9 @@ body {
   }
   .contacts__map {
     width: 100%;
+  }
+  .contacts__heading {
+    margin-top: 0;
   }
 }
 @media (max-width: 768px) {
