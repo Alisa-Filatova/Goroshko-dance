@@ -858,7 +858,7 @@ body {
     margin-left: -44%;
     position: absolute;
     width: 90%;
-    top: 77%;
+    top: 83%;
   }
   .modal-post-form__title {
     margin-left: 0;
@@ -866,11 +866,6 @@ body {
   .modal-post-form__wrapper {
     margin-left: 20px;
     margin-right: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .modal-post-form {
-    top: 83%;
   }
 }
 @media (max-width: 560px) {
@@ -882,7 +877,7 @@ body {
   .modal-post-form {
     margin-top: 10%;
     margin-left: -50%;
-    width: 90%;
+    width: 71%;
     position: absolute;
     top: 66%;
     left: 55%;
