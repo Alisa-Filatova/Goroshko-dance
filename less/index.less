@@ -197,18 +197,17 @@
     .main-nav {
 
         &__items {
-            display: none;
-        }
-
-        &__items_show {
-            display: inline-block;
             position: absolute;
             left: 0;
             top: 76px;
             width: 100%;
             transform: rotate(0);
             z-index: 2000;
-            animation: slide-in-down 0.4s ease;
+            display: none;
+        }
+
+        &__items_show {
+            display: inline-block;
         }
 
         &__item {

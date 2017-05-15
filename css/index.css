@@ -1077,17 +1077,16 @@ body {
 }
 @media (max-width: 832px) {
   .main-nav__items {
-    display: none;
-  }
-  .main-nav__items_show {
-    display: inline-block;
     position: absolute;
     left: 0;
     top: 76px;
     width: 100%;
     transform: rotate(0);
     z-index: 2000;
-    animation: slide-in-down 0.4s ease;
+    display: none;
+  }
+  .main-nav__items_show {
+    display: inline-block;
   }
   .main-nav__item {
     margin-bottom: 0;
