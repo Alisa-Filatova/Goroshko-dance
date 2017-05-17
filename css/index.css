@@ -264,7 +264,7 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid #e23a59;
+  border: 2px solid #272961;
   opacity: 0.7;
   cursor: pointer;
   margin-bottom: 15px;
@@ -276,13 +276,13 @@ body {
   -webkit-transform: translateZ(0);
 }
 .paginator__item_active {
-  background-color: #e23a59;
+  background-color: #272961;
 }
 .paginator__item:hover {
   opacity: 1;
 }
 .paginator__item:active {
-  background-color: #e23a59;
+  background-color: #272961;
 }
 @media (max-width: 1440px) {
   .paginator {
@@ -334,7 +334,7 @@ body {
     outline: none;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 472px) {
   .close-btn {
     width: 48px;
     height: 31px;
@@ -767,6 +767,9 @@ body {
   .direction-item::after {
     display: none;
   }
+  .direction-item__photo {
+    margin-right: 20px;
+  }
 }
 @media (max-width: 1024px) {
   .direction-item__description {
@@ -825,6 +828,9 @@ body {
   }
   .direction-item__title {
     line-height: 1.1em;
+  }
+  .direction-item__photo {
+    margin-right: 0;
   }
 }
 @media (max-width: 425px) {
@@ -985,7 +991,7 @@ body {
     top: -61px;
   }
 }
-@media (max-width: 545px) {
+@media (max-width: 650px) {
   .page-header {
     padding-top: 343px;
     padding-bottom: 121px;
@@ -997,7 +1003,7 @@ body {
     top: -41px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 472px) {
   .page-header {
     padding-top: 220px;
     padding-bottom: 100px;
@@ -1138,13 +1144,7 @@ body {
     z-index: 1200;
   }
 }
-@media (max-width: 832px) and (max-width: 425px) {
-  .main-nav__menu-open_bar {
-    width: 40px;
-    height: 3px;
-  }
-}
-@media (max-width: 425px) {
+@media (max-width: 472px) {
   .main-nav {
     background-size: 266%;
   }
@@ -1153,6 +1153,10 @@ body {
     height: 27px;
     top: 9px;
     right: 18px;
+  }
+  .main-nav__menu-open_bar {
+    width: 40px;
+    height: 3px;
   }
   .main-nav__items_show {
     top: 38px;
@@ -1282,7 +1286,7 @@ body {
     bottom: -61px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 472px) {
   .promo {
     padding-top: 0;
   }
