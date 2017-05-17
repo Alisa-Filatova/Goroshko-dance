@@ -257,14 +257,14 @@ body {
   flex-direction: column;
   position: fixed;
   top: 248px;
-  margin-left: 1334px;
+  margin-left: 1364px;
   z-index: 1000;
 }
 .paginator__item {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid #272961;
+  border: 2px solid #e23a59;
   opacity: 0.7;
   cursor: pointer;
   margin-bottom: 15px;
@@ -276,13 +276,13 @@ body {
   -webkit-transform: translateZ(0);
 }
 .paginator__item_active {
-  background-color: #272961;
+  background-color: #e23a59;
 }
 .paginator__item:hover {
   opacity: 1;
 }
 .paginator__item:active {
-  background-color: #272961;
+  background-color: #e23a59;
 }
 @media (max-width: 1440px) {
   .paginator {
