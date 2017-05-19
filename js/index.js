@@ -25,9 +25,9 @@ link.addEventListener('click', function(event) {
      overlay.classList.add('modal-overlay_show');
 });
 
-var close = document.querySelector('.close-cross');
+var closeCross = document.querySelector('.close-cross');
 
-close.addEventListener('click', function(event) {
+closeCross.addEventListener('click', function(event) {
     event.preventDefault();
     popup.classList.remove('modal-post-form_show');
     overlay.classList.remove('modal-overlay_show');
