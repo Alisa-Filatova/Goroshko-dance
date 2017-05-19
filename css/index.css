@@ -300,12 +300,10 @@ body {
   text-transform: uppercase;
   padding: 11px 40px;
   text-decoration: none;
-  transition: background-color 0.3s linear;
-  transition: color 0.3s linear;
+  transition: all 0.3s linear;
 }
 .btn:hover {
   background-color: #cc3253;
-  transition: 0.3s;
   color: rgba(255, 255, 255, 0.5);
 }
 .btn:active {
@@ -326,11 +324,32 @@ body {
     top: 15px;
     right: 5%;
     border: none;
-    background-image: url('../img/close.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 93%;
     outline: none;
+  }
+  .close-btn::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 14px;
+    left: 19px;
+    transform: rotate(43deg);
+  }
+  .close-btn::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    transform: rotate(140deg);
+  }
+  .close-btn:hover {
+    opacity: 0.8;
   }
 }
 @media (max-width: 472px) {
@@ -347,8 +366,7 @@ body {
   color: #757575;
   text-align: center;
   font-size: 1.05em;
-  margin: auto;
-  margin-top: 110px;
+  margin: 110px auto auto;
   border-collapse: collapse;
   width: 100%;
   position: relative;
@@ -391,8 +409,7 @@ body {
   width: 65px;
   height: 56px;
   display: block;
-  margin: auto;
-  margin-bottom: 10px;
+  margin: auto auto 10px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -695,8 +712,7 @@ body {
   content: '';
   height: 336px;
   width: 170px;
-  background-image: url('../img/circle-purple.svg');
-  background-repeat: no-repeat;
+  background: url('../img/circle-purple.svg') no-repeat;
   background-size: 100%;
   position: absolute;
   left: -10px;
@@ -784,8 +800,8 @@ body {
 @media (max-width: 960px) {
   .direction-item {
     background-image: none;
-    height: 292px;
     background-color: #ffffff;
+    height: 292px;
     width: 90%;
   }
   .direction-item__photo {
@@ -867,7 +883,7 @@ body {
 @media (max-width: 320px) {
   .direction-item__description {
     max-width: 281px;
-    min-width: auto;
+    min-width: 100%;
   }
 }
 .social-item__link {
@@ -912,7 +928,7 @@ body {
     height: 30px;
   }
 }
-@import '../variables/';
+@import '../variables';
 .map {
   width: 685px;
   height: 408px;
@@ -937,10 +953,7 @@ body {
   padding: 0 80px;
   margin: 0 auto;
   position: relative;
-  background-color: #ffffff;
-  background-image: url('../img/white-cover.svg'), url('../img/main-desktop.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom center, top center;
+  background: url('../img/white-cover.svg') no-repeat bottom center, url('../img/main-desktop.jpg') no-repeat top center, #ffffff;
   background-size: 101%, cover;
   padding-top: 423px;
   padding-bottom: 526px;
@@ -966,8 +979,7 @@ body {
   left: 214px;
   top: 181px;
   transform: rotate(-1deg);
-  animation: fade-in ease-in;
-  animation-duration: 1.5s;
+  animation: fade-in 1.5s ease-in;
 }
 @media (max-width: 1170px) {
   .page-header {
@@ -985,9 +997,8 @@ body {
   .page-header {
     padding-top: 311px;
     padding-bottom: 222px;
-    background-image: url('../img/white-cover.svg'), url('../img/main-tablet.jpg');
+    background: url('../img/white-cover.svg') no-repeat center bottom, url('../img/main-tablet.jpg') no-repeat center 53%;
     background-size: 101%, 100%;
-    background-position: center bottom, center 53%;
   }
   .page-header__logo {
     width: 40%;
@@ -1030,10 +1041,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('../img/header.min.svg');
-  background-repeat: no-repeat;
+  background: url('../img/header.min.svg') no-repeat top center;
   background-size: 103%;
-  background-position: top center;
 }
 .main-nav__items {
   display: flex;
@@ -1044,8 +1053,8 @@ body {
   color: #ffffff;
   padding-left: 0;
   margin: 0;
-  transform: rotate(-2deg);
   margin-right: -148px;
+  transform: rotate(-2deg);
 }
 .main-nav__menu-open {
   display: none;
@@ -1174,9 +1183,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/promo-desktop.png');
-  background-repeat: no-repeat;
+  background: url('../img/promo-desktop.png') no-repeat, #ffffff;
   background-position-x: 86%;
   background-size: 44%;
   padding-top: 108px;
@@ -1219,27 +1226,23 @@ body {
   content: '';
   width: 182px;
   height: 135px;
-  background-image: url('../img/quotes-pink.svg');
-  background-position: center;
+  background: url('../img/quotes-pink.svg') no-repeat center;
   background-size: cover;
   position: absolute;
   top: -61px;
   left: 55px;
-  animation: fade-in-down;
-  animation-duration: 1s;
+  animation: fade-in-down 1s;
 }
 .promo::before {
   content: '';
   width: 182px;
   height: 135px;
-  background-image: url('../img/quotes-purple.svg');
-  background-position: center;
+  background: url('../img/quotes-purple.svg') no-repeat center;
   background-size: cover;
   position: absolute;
   bottom: -149px;
   left: 42%;
-  animation: fade-in-down;
-  animation-duration: 1.5s;
+  animation: fade-in-down 1.5s;
 }
 @media (max-width: 1180px) {
   .promo {
@@ -1272,10 +1275,7 @@ body {
 }
 @media (max-width: 832px) {
   .promo {
-    padding-top: 30px;
-    padding-bottom: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 30px 10px 0;
   }
   .promo__title {
     font-size: 1.8em;
@@ -1335,10 +1335,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/pink-back.svg');
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: url('../img/pink-back.svg') no-repeat top center, #ffffff;
   background-size: 102%;
   padding-top: 70px;
   padding-bottom: 35px;
@@ -1382,9 +1379,7 @@ body {
   width: 650px;
   height: 650px;
   border-radius: 50%;
-  background-image: url('../img/about-desktop.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('../img/about-desktop.jpg') no-repeat center;
   background-size: cover;
   -webkit-transition: background-image 0.5s linear;
   -o-transition: background-image 0.5s linear;
@@ -1393,7 +1388,6 @@ body {
 .about-me__photo:hover {
   background-image: url('../img/about-desktop-hover.jpg');
   -moz-animation: fade-in 0.6s ease-in-out;
-  -ms-animation: fade-in 0.5s ease-in-out;
 }
 .about-me__description {
   max-width: 544px;
@@ -1458,11 +1452,8 @@ body {
 }
 @media (max-width: 768px) {
   .about-me {
-    padding-top: 25px;
     background-image: none;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding: 25px 0 0;
   }
   .about-me__photo {
     width: 90%;
@@ -1541,10 +1532,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/purple-back.svg');
-  background-repeat: no-repeat;
-  background-position: top center;
+  background: url('../img/purple-back.svg') no-repeat top center, #ffffff;
   background-size: 102%;
   padding-top: 23px;
   padding-bottom: 15px;
@@ -1608,10 +1596,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/pink-back-rotate.svg');
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: url('../img/pink-back-rotate.svg') no-repeat top center, #ffffff;
   background-size: 102%;
   padding-top: 23px;
   padding-bottom: 30px;
@@ -1667,8 +1652,7 @@ body {
   opacity: 0.3;
 }
 .video__btn {
-  padding: 3px 20px;
-  padding-bottom: 4px;
+  padding: 3px 20px 4px;
   text-transform: none;
   position: relative;
   bottom: -108px;
@@ -1699,11 +1683,8 @@ body {
 }
 @media (max-width: 768px) {
   .video {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 7px;
     background-image: none;
-    padding-bottom: 7px;
   }
   .video__links {
     margin-top: 20px;
@@ -1720,8 +1701,7 @@ body {
 }
 @media (max-width: 680px) {
   .video__btn {
-    padding: 0 8px;
-    padding-bottom: 0;
+    padding: 0 8px 0;
     bottom: -5px;
     left: 7px;
     margin-top: 14px;
@@ -1742,10 +1722,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/purple-back.svg');
-  background-repeat: no-repeat;
-  background-position: top center;
+  background: url('../img/purple-back.svg') no-repeat top center, #ffffff;
   background-size: 102%;
   padding-top: 23px;
   padding-bottom: 23px;
@@ -1773,13 +1750,10 @@ body {
     padding-top: 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 824px) {
   .timetable {
     text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 4px;
-    padding-bottom: 20px;
+    padding: 4px 0 20px;
     background-image: none;
   }
   .timetable__heading {
@@ -1792,10 +1766,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/pink-back-rotate.svg');
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: url('../img/pink-back-rotate.svg') no-repeat top center, #ffffff;
   background-size: 102%;
   padding-top: 13px;
   font-size: 1.06em;
@@ -1856,10 +1827,7 @@ body {
 }
 @media (max-width: 768px) {
   .contacts {
-    padding-bottom: 0;
-    padding-top: 2px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 2px 0 0;
     background-image: none;
     margin-top: 0;
   }
@@ -1904,10 +1872,7 @@ body {
   max-width: 1440px;
   padding: 0 80px;
   margin: 0 auto;
-  background-color: #ffffff;
-  background-image: url('../img/footer.svg');
-  background-repeat: no-repeat;
-  background-position: top;
+  background: url('../img/footer.svg') no-repeat top, #ffffff;
   background-size: 102%;
   padding-top: 80px;
   padding-bottom: 10px;
@@ -1959,7 +1924,7 @@ body {
   list-style: none;
   padding: 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .footer {
     background-image: none;
     padding-top: 0;

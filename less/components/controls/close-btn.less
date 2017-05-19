@@ -4,7 +4,7 @@
     display: none;
 }
 
-@media(max-width: 832px) {
+@media (max-width: 832px) {
 
     .close-btn {
         display: block;
@@ -16,15 +16,39 @@
         top: 15px;
         right: 5%;
         border: none;
-        background-image: url('../img/close.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 93%;
         outline: none;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 4px;
+            background-color: @white;
+            position: absolute;
+            top: 14px;
+            left: 19px;
+            transform: rotate(43deg);
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 4px;
+            background-color: @white;
+            position: absolute;
+            top: 14px;
+            left: 18px;
+            transform: rotate(140deg);
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 
-@media(max-width: 472px) {
+@media (max-width: 472px) {
 
     .close-btn {
         width: 48px;
