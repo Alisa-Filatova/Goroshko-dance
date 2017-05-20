@@ -60,3 +60,22 @@ $('.paginator__item').on('click', function() {
 
     scrollToAnchor.apply(this, arguments);
 });
+
+var form = document.querySelector('.modal-post-form > form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formData = $(form).serialize();
+
+    $.post('/subscribe', formData).done().fail();
+});
+
+var closeBtn = document.querySelector('.alert__btn');
+var alertPopup = document.querySelector('.alert');
+
+closeBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    alertPopup.classList.remove('alert_show');
+    overlay.classList.remove('modal-overlay_show');
+});
