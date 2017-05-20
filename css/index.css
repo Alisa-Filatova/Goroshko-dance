@@ -772,8 +772,8 @@ body {
 }
 @media (max-width: 425px) {
   .alert__message {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 0.95em;
+    line-height: 1.3em;
   }
   .alert__icon {
     width: 100px;
