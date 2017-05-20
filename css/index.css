@@ -350,9 +350,6 @@ body {
     left: 18px;
     transform: rotate(140deg);
   }
-  .close-btn:hover {
-    opacity: 0.8;
-  }
 }
 @media (max-width: 472px) {
   .close-btn {
