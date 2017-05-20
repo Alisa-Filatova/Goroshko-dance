@@ -5,7 +5,7 @@
   "description": "Личный сайт хореографа - Александры Горошко, информационная поддержка учеников, портфолио.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "rm dist.tar.gz && cd .. && tar -zkcf dist.tar.gz goroshkodance.ru && mv dist.tar.gz goroshkodance.ru && scp -i ~/.ssh/aws.pem goroshkodance.ru/dist.tar.gz aws:~ && ssh -i ~/.ssh/aws.pem aws sudo ./deploy/goroshkodance.ru.sh"
+    "deploy": "rm -f dist.tar.gz && cd .. && tar -zkcf dist.tar.gz goroshkodance.ru && mv dist.tar.gz goroshkodance.ru && scp -i ~/.ssh/aws.pem goroshkodance.ru/dist.tar.gz aws:~ && ssh -i ~/.ssh/aws.pem aws sudo ./deploy/goroshkodance.ru.sh"
   },
   "repository": {
     "type": "git",
