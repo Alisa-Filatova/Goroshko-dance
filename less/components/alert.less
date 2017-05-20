@@ -2,15 +2,13 @@
 @import '../variables';
 @import 'overlay';
 
-@width: 600px;
-
 .alert {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     left: 50%;
-    width: @width;
-    margin-left: -(@width / 2);
+    width: @alert-width;
+    margin-left: -(@alert-width / 2);
     overflow: hidden;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
     z-index: 2100;
