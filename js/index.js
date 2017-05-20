@@ -71,11 +71,12 @@ form.addEventListener('submit', function(event) {
     $.post('/subscribe', formData).done().fail();
 });
 
-var closeBtn = document.querySelector('.alert__btn');
-var alertPopup = document.querySelector('.alert');
-
-closeBtn.addEventListener('click', function(event) {
+$('.alert__btn').on('click', function(event) {
     event.preventDefault();
-    alertPopup.classList.remove('alert_show');
+
+    $(this)
+        .closest('.alert')
+        .removeClass('alert_show');
+
     overlay.classList.remove('modal-overlay_show');
 });

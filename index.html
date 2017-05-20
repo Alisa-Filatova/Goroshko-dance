@@ -397,16 +397,25 @@
         </div>
 
         <div class="alert alert_success">
-            <i class="alert__icon alert__icon_success"></i>
-            <h3 class="alert__title">Отправлено!</h3>
-            <p class="alert__message">Я свяжусь с вами в ближайшее время.</p>
-            <button type="button" class="btn alert__btn alert__btn_success">Закрыть</button>
+            <div class="alert__container alert__container_header">
+                <i class="alert__icon alert__icon_success"></i>
+            </div>
+            <div class="alert__container alert__container_content">
+                <h3 class="alert__title">Отправлено!</h3>
+                <p class="alert__message">Я свяжусь с вами в ближайшее время.</p>
+                <button type="button" class="btn alert__btn alert__btn_success">Закрыть</button>
+            </div>
         </div>
-        <div class="alert alert_error">
-            <i class="alert__icon alert__icon_error"></i>
-            <h3 class="alert__title">Ошибка!</h3>
-            <p class="alert__message">Что-то пошло не так! Попробуйте еще раз.</p>
-            <button type="button" class="btn alert__btn alert__btn_error">Закрыть</button>
+
+        <div class="alert alert_error alert_show">
+            <div class="alert__container alert__container_header">
+                <i class="alert__icon alert__icon_error"></i>
+            </div>
+            <div class="alert__container alert__container_content">
+                <h3 class="alert__title">Ошибка!</h3>
+                <p class="alert__message">Что-то пошло не так! Попробуйте еще раз.</p>
+                <button type="button" class="btn alert__btn alert__btn_error">Закрыть</button>
+            </div>
         </div>
 
         <div class="modal-overlay"></div>
