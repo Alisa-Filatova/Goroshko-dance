@@ -1,0 +1,19 @@
+{
+  "name": "goroshkodance.ru",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Личный сайт хореографа - Александры Горошко, информационная поддержка учеников, портфолио.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alisa-Filatova/Goroshko-dance.git"
+  },
+  "author": "Alisa Filatova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alisa-Filatova/Goroshko-dance/issues"
+  },
+  "homepage": "https://github.com/Alisa-Filatova/Goroshko-dance#readme"
+}
