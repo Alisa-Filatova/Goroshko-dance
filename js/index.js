@@ -62,13 +62,26 @@ $('.paginator__item').on('click', function() {
 });
 
 var form = document.querySelector('.modal-post-form > form');
+var $form = $(form);
+
+function closeForm() {
+    $form.parent().removeClass('modal-post-form_show');
+}
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    var formData = $(form).serialize();
+    var request = $.post('/subscribe', $form.serialize());
 
-    $.post('/subscribe', formData).done().fail();
+    request.done(function() {
+        closeForm();
+        $('.alert_success').addClass('alert_show');
+    });
+
+    request.fail(function() {
+        closeForm();
+        $('.alert_error').addClass('alert_show');
+    });
 });
 
 $('.alert__btn').on('click', function(event) {
