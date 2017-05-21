@@ -1578,7 +1578,7 @@ body {
     margin-top: 20px;
   }
   .about-me__photo:hover {
-    background-image: url('../img/about-mobile-hover.jpg');
+    background-image: url('../img/about-mobile.jpg');
   }
   .about-me__description {
     order: 2;
