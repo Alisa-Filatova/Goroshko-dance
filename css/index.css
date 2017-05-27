@@ -656,6 +656,9 @@ body {
   margin-right: 16px;
   margin-top: 10px;
 }
+.modal-post-form input[type="submit"]:disabled {
+  background-color: #757575;
+}
 @media (max-width: 768px) {
   .modal-post-form {
     margin-left: -45%;
