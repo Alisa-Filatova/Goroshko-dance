@@ -71,7 +71,7 @@ function closeForm() {
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    var request = $.post('/subscribe', $form.serialize());
+    var request = $.post('/enroll', $form.serialize());
 
     request.done(function() {
         closeForm();
