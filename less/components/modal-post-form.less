@@ -68,8 +68,17 @@
         margin-top: 10px;
     }
 
-    & input[type="submit"]:disabled {
-        background-color: #757575;
+    & input[type="submit"] {
+
+        &:disabled {
+            background-color: #757575;
+            color: rgba(255, 255, 255, 0.7);
+
+            &:hover,
+            &:active {
+                background-color: #757575;
+            }
+        }
     }
 }
 
