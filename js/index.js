@@ -71,6 +71,10 @@ function closeForm() {
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
+    var button = event.target.querySelector('input[type="submit"]');
+
+    button.disabled = true;
+
     var request = $.post('/enroll', $form.serialize());
 
     request.done(function() {
@@ -81,6 +85,10 @@ form.addEventListener('submit', function(event) {
     request.fail(function() {
         closeForm();
         $('.alert_error').addClass('alert_show');
+    });
+
+    request.always(function() {
+        button.disabled = false;
     });
 });
 
