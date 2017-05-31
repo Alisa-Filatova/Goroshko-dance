@@ -998,8 +998,8 @@ body {
 .social-item__link_youtube {
   background-image: url('../img/youtube-white.svg');
 }
-.social-item__link_phone {
-  background-image: url('../img/phone-white.svg');
+.social-item__link_insta {
+  background-image: url('../img/insta-white.svg');
 }
 .social-item__link:hover {
   opacity: 1;
@@ -2001,8 +2001,8 @@ body {
 .footer__social-item-link_youtube {
   background-image: url('../img/youtube-icon-purple.svg');
 }
-.footer__social-item-link_phone {
-  background-image: url('../img/phone-icon-purple.svg');
+.footer__social-item-link_insta {
+  background-image: url('../img/insta-purple.svg');
 }
 .footer__social-item-link:hover {
   opacity: 1;
