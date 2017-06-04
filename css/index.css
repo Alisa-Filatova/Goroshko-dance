@@ -303,6 +303,7 @@ body {
   text-decoration: none;
   transition: all 0.3s linear;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 .btn:hover {
   background-color: #cc3253;
@@ -564,6 +565,7 @@ body {
   outline: none;
   background-color: #f2f2f2;
   border: 2px solid #e3e3e3;
+  -webkit-appearance: none;
 }
 .input-text:hover {
   background-color: #e3e3e3;
