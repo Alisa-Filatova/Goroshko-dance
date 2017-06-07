@@ -101,3 +101,5 @@ $('.alert__btn').on('click', function(event) {
 
     overlay.classList.remove('modal-overlay_show');
 });
+
+new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
