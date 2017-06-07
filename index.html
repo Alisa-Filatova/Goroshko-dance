@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700&amp;subset=cyrillic,cyrillic-ext">
     <link rel="stylesheet" href="css/index.css?4">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/on-scroll.css">
 
 </head>
 <body>
@@ -82,7 +83,7 @@
             <a href="#header" class="paginator__item paginator__item_active"></a>
             <a href="#promo" class="paginator__item paginator__item"></a>
             <a href="#about-me" class="paginator__item"></a>
-            <a href="#directions" class="paginator__item"></a>
+            <a href="#cbp-so-scroller" class="paginator__item"></a>
             <a href="#video" class="paginator__item"></a>
             <a href="#timetable" class="paginator__item"></a>
             <a href="#contacts" class="paginator__item"></a>
@@ -152,14 +153,14 @@
         </div>
     </section>
     
-    <section class="directions" id="directions">
+    <section class="directions cbp-so-scroller" id="cbp-so-scroller">
         <h2 class="page-heading directions__heading">
             Основные направления
         </h2>
-        <div class="directions__wrapper">
-            <article class="direction-item">
+        <div class="directions__wrapper cbp-so-section">
+            <article class="direction-item cbp-so-side cbp-so-side-left">
                 <div class="direction-item__photo direction-item__photo_contemporary"></div>
-                <div class="direction-item__wrapper">
+                <div class="direction-item__wrapper cbp-so-side cbp-so-side-right">
                     <h3 class="direction-item__title">Contemporary</h3>
                     <p class="direction-item__description">
                         Контемпорари - является дальнейшим развитием танца модерн.
@@ -174,9 +175,9 @@
                 </a>
             </article>
 
-              <article class="direction-item direction-item_jazz-funk">
+              <article class="direction-item direction-item_jazz-funk cbp-so-side_next cbp-so-side-right">
                 <div class="direction-item__photo direction-item__photo_jazz-funk"></div>
-                <div class="direction-item__wrapper">
+                <div class="direction-item__wrapper cbp-so-side cbp-so-side-left">
                     <h3 class="direction-item__title">Jazz-Funk</h3>
                     <p class="direction-item__description">
                         Джаз-фанк – современный танцевальный стиль, спонтанно 
@@ -190,9 +191,9 @@
                 </a>
             </article>
 
-             <article class="direction-item">
+             <article class="direction-item cbp-so-side cbp-so-side-left">
                 <div class="direction-item__photo direction-item__photo_bodyballet"></div>
-                <div class="direction-item__wrapper">
+                <div class="direction-item__wrapper cbp-so-side cbp-so-side-right">
                     <h3 class="direction-item__title">Авторская хореография</h3>
                     <p class="direction-item__description">
                         Авторская хореография - это индивидуальный стиль,
@@ -534,12 +535,18 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')
     </script>
     <script src="js/index.js?1"></script>
     <script>
         (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44706532 = new Ya.Metrika({ id:44706532, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpScroller.js"></script>
+    <script>
+        new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
     </script>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/44706532" style="position:absolute; left:-9999px;" alt="" /></div>

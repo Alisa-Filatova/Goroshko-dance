@@ -1,0 +1,39 @@
+
+/* Sides */
+.cbp-so-side {
+	-webkit-transition: -webkit-transform 2s, opacity 0.8s;
+	-moz-transition: -moz-transform 2s, opacity 0.8s;
+	transition: transform 2s, opacity 0.8s;
+}
+
+.cbp-so-side_next {
+	-webkit-transition: -webkit-transform 1s, opacity 0.8s;
+	-moz-transition: -moz-transform 1s, opacity 0.8s;
+	transition: transform 1s, opacity 0.8s;
+}
+
+.cbp-so-init .cbp-so-side {
+	opacity: 0;
+}
+
+.cbp-so-init .cbp-so-side-left {
+	-webkit-transform: translateX(-100px);
+	-moz-transform: translateX(-100px);
+	transform: translateX(-100px);
+}
+
+.cbp-so-init .cbp-so-side-right {
+	-webkit-transform: translateX(100px);
+	-moz-transform: translateX(100px);
+	transform: translateX(100px);
+}
+
+/* Animated state */
+/* add you final states (transition) or your effects (animations) for each side */
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
