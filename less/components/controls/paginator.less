@@ -17,10 +17,10 @@
         cursor: pointer;
         margin-bottom: 15px;
         margin-left: -51px;
-        -webkit-transition: opacity 0.2s linear;
-        -moz-transition: opacity 0.2s linear;
-        -o-transition: opacity 0.2s linear;
-        transition: opacity 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
         -webkit-transform: translateZ(0);
 
         &_active {
@@ -29,6 +29,11 @@
 
         &:hover {
             opacity: 1;
+            -webkit-transform: scale(1.4);
+            -moz-transform: scale(1.4);
+            -ms-transform: scale(1.4);
+            -o-transform: scale(1.4);
+            transform: scale(1.4);
         }
 
         &:active {
