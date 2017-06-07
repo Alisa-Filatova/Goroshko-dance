@@ -103,3 +103,8 @@ $('.alert__btn').on('click', function(event) {
 });
 
 new cbpScroller( document.getElementById( 'directions' ) );
+
+new cbpScroller( document.getElementById( 'about-me' ) );
+
+
+
