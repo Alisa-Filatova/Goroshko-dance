@@ -61,6 +61,10 @@ $('.paginator__item').on('click', function() {
     scrollToAnchor.apply(this, arguments);
 });
 
+$('.main-nav__link').on('click', function() {
+    scrollToAnchor.apply(this, arguments);
+});
+
 var form = document.querySelector('.modal-post-form > form');
 var $form = $(form);
 
