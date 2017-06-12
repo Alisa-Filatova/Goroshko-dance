@@ -65,6 +65,10 @@ $('.main-nav__link').on('click', function() {
     scrollToAnchor.apply(this, arguments);
 });
 
+$('.direction-item__btn').on('click', function() {
+    scrollToAnchor.apply(this, arguments);
+});
+
 var form = document.querySelector('.modal-post-form > form');
 var $form = $(form);
 
