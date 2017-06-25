@@ -1530,6 +1530,7 @@ body {
   }
   .about-me__photo:hover {
     background-image: url('../img/about-tablet.jpg');
+    background-size: contain;
   }
   .about-me__description {
     margin-right: 0;
@@ -1595,6 +1596,7 @@ body {
   }
   .about-me__photo:hover {
     background-image: url('../img/about-mobile.jpg');
+    background-size: cover;
   }
   .about-me__description {
     order: 2;
