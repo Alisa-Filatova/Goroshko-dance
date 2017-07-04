@@ -1819,6 +1819,11 @@ body {
     margin-top: 3px;
   }
 }
+@media (max-width: 425px) {
+  .video__heading {
+    margin-top: 20px;
+  }
+}
 .timetable {
   max-width: 1440px;
   padding: 0 80px;
