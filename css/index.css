@@ -1200,7 +1200,7 @@ body {
     margin-left: 0;
   }
 }
-@media (max-width: 832px) {
+@media (max-width: 853px) {
   .main-nav__items {
     position: absolute;
     left: 0;
