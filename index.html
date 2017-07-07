@@ -247,10 +247,11 @@
         
         <video 
             class="video__item" 
-            controls 
+            controls
+            preload="auto"
             width="100%" 
             height="auto" 
-            poster="img/poster.jpg"
+            poster="img/contemporary-poster.jpg"
         >
             <source 
                 src="video/Contemporary.ogv" 
@@ -262,6 +263,28 @@
             >
             <source 
                 src="video/Contemporary.webm" 
+                type='video/webm; codecs="vp8, vorbis"'
+            >
+        </video>
+
+        <video
+            class="video__item"
+            controls
+            preload="auto"
+            width="100%"
+            height="auto"
+            poster="img/juzz-funk-poster.jpg"
+        >
+            <source
+                src="video/Jazz-funk.ogv"
+                type='video/ogg; codecs="theora, vorbis"'
+            >
+            <source
+                src="video/Jazz-funk.mp4"
+                type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+            >
+            <source
+                src="video/Jazz-funk.webm"
                 type='video/webm; codecs="vp8, vorbis"'
             >
         </video>
