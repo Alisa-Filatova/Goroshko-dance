@@ -482,7 +482,9 @@
         padding-top: 50px;
         padding-bottom: 50px;
         margin-top: 50px;
-        background-image: linear-gradient(to right, transparent 24%, @grey 24%);
+        background: linear-gradient(to right, transparent 24%, @grey 24%);
+        background: -webkit-linear-gradient(left, transparent 24%, @grey 24%);
+        background: -moz-linear-gradient(left, transparent 24%, @grey 24%);
         box-shadow: 24px 0 43px -23px #8b8b8b;
     }
 
@@ -582,7 +584,7 @@
 @media (max-width: @screen_tablet) {
 
     .about-me {
-        background-image: none;
+        background: #fff;
         padding: 25px 0 0;
 
         &__photo {
@@ -596,7 +598,6 @@
             margin-top: 10px;
             padding-top: 0;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         &__heading {
@@ -682,6 +683,7 @@
 
 .directions {
     .container();
+    padding: 0 20px;
     background: url('../img/purple-back.svg') no-repeat top center, @white;
     background-size: 102%;
     padding-top: 23px;

@@ -104,10 +104,6 @@
     .direction-item {
         width: 100%;
 
-        &::after {
-            display: none;
-        }
-
         &__photo {
             margin-right: 20px;
         }
@@ -126,8 +122,6 @@
 @media (max-width: 960px) {
 
     .direction-item {
-        background-image: none;
-        background-color: #ffffff;
         height: 292px;
         width: 90%;
 
@@ -135,6 +129,10 @@
             width: 185px;
             height: 185px;
             margin-left: -18px;
+        }
+
+        &::after {
+            display: none;
         }
 
         &__btn {
