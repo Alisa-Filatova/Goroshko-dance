@@ -1669,6 +1669,7 @@ body {
   }
 }
 .directions__heading {
+  padding-left: 20px;
   transform: rotate(-4deg);
   margin: 0;
 }
@@ -1702,6 +1703,7 @@ body {
     transform: rotate(0);
     text-align: center;
     background-color: #272961;
+    padding: 0;
   }
   .directions__wrapper {
     margin-top: 27px;
