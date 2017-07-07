@@ -1616,6 +1616,7 @@ body {
   }
   .about-me__wrapper {
     margin-top: 0;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 425px) {
