@@ -321,7 +321,7 @@ body {
 .close-btn {
   display: none;
 }
-@media (max-width: 832px) {
+@media (max-width: 910px) {
   .close-btn {
     display: block;
     z-index: 1400;
@@ -1188,7 +1188,7 @@ body {
   transform: rotate(-6deg);
   margin-left: -152px;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1348px) {
   .main-nav {
     background-size: cover;
   }
@@ -1200,7 +1200,12 @@ body {
     margin-left: 0;
   }
 }
-@media (max-width: 853px) {
+@media (max-width: 1024px) {
+  .main-nav__link {
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 910px) {
   .main-nav__items {
     position: absolute;
     left: 0;

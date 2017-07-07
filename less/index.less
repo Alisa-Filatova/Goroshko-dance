@@ -163,7 +163,7 @@
     }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1348px) {
 
     .main-nav {
         background-size: cover;
@@ -179,7 +179,17 @@
     }
 }
 
-@media (max-width: 853px) {
+@media (max-width: @screen_laptop) {
+
+    .main-nav {
+
+        &__link {
+            padding: 10px 20px;
+        }
+    }
+}
+
+@media (max-width: 910px) {
 
     .main-nav {
 
