@@ -103,6 +103,7 @@
 @media (max-width: 1210px) {
     .direction-item {
         width: 100%;
+        background-image: linear-gradient(to right, transparent 14%, @grey 14%);
 
         &__photo {
             margin-right: 20px;
@@ -110,8 +111,16 @@
     }
 }
 
+@media (max-width: 1074px) {
+    .direction-item {
+        background-image: linear-gradient(to right, transparent 16%, @grey 16%);
+    }
+}
+
+
 @media (max-width: @screen_laptop) {
     .direction-item {
+        background-image: linear-gradient(to right, transparent 17%, @grey 17%);
 
         &__description {
             max-width: 583px;
