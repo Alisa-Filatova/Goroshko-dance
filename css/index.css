@@ -59,6 +59,11 @@ body {
     background-color: #ffffff;
   }
 }
+@media (max-width: 846px) {
+  body {
+    line-height: 1.5em;
+  }
+}
 .page-heading {
   font-family: 'PT Serif', 'Times New Roman', serif;
   font-size: 2.3em;
@@ -801,8 +806,9 @@ body {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
-  width: 1060px;
+  width: 100%;
   height: 333px;
+  max-width: 960px;
   background-image: linear-gradient(to right, transparent 15%, #f2f2f2 15%);
   position: relative;
 }
@@ -813,7 +819,7 @@ body {
   background: url('../img/circle-purple.svg') no-repeat;
   background-size: 100%;
   position: absolute;
-  left: -10px;
+  left: -25px;
   top: -3px;
 }
 .direction-item_jazz-funk::after {
@@ -828,6 +834,7 @@ body {
   border-top: 15px solid #2f3475;
   background-position: center;
   background-size: cover;
+  margin: 12px;
 }
 .direction-item__photo_contemporary {
   background-image: url('../img/contemporary-desktop.jpg');
@@ -842,7 +849,8 @@ body {
   border-top: 15px solid #cc3253;
 }
 .direction-item__description {
-  max-width: 646px;
+  width: 100%;
+  max-width: 625px;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -879,23 +887,13 @@ body {
 .direction-item__btn_pink:hover {
   background-color: #cc3253;
 }
-@media (max-width: 1210px) {
-  .direction-item {
-    width: 100%;
-    background-image: linear-gradient(to right, transparent 14%, #f2f2f2 14%);
-  }
-  .direction-item__photo {
-    margin-right: 20px;
-  }
-}
-@media (max-width: 1074px) {
-  .direction-item {
-    background-image: linear-gradient(to right, transparent 16%, #f2f2f2 16%);
-  }
-}
-@media (max-width: 1024px) {
+@media (max-width: 1075px) {
   .direction-item {
     background-image: linear-gradient(to right, transparent 17%, #f2f2f2 17%);
+    max-width: 854px;
+  }
+  .direction-item::after {
+    left: -24px;
   }
   .direction-item__description {
     max-width: 583px;
@@ -909,25 +907,40 @@ body {
   .direction-item__photo {
     width: 185px;
     height: 185px;
-    margin-left: -18px;
   }
   .direction-item::after {
-    display: none;
+    height: 298px;
+    width: 149px;
+    left: -10px;
   }
   .direction-item__btn {
     width: 292px;
-    right: -173px;
+    right: -148px;
     top: 120px;
-    display: none;
   }
   .direction-item__description {
-    max-width: 420px;
+    max-width: 489px;
   }
   .direction-item__title {
     font-size: 1.5em;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 846px) {
+  .direction-item {
+    font-size: 1em;
+    line-height: 1.3em;
+  }
+  .direction-item::after {
+    display: none;
+  }
+  .direction-item__btn {
+    display: none;
+  }
+  .direction-item__description {
+    max-width: 453px;
+  }
+}
+@media (max-width: 710px) {
   .direction-item {
     flex-direction: column;
     justify-content: center;
@@ -1570,24 +1583,26 @@ body {
     padding: 25px 0 0;
   }
   .about-me__photo {
-    width: 90%;
-    height: 650px;
-    order: 2;
-    border-radius: 0;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    order: 1;
+    border-radius: 50%;
+    margin-right: 0;
+    background-image: url('../img/about-mobile.jpg');
+    margin-top: 20px;
   }
   .about-me__wrapper {
     margin-top: 10px;
     padding-top: 0;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .about-me__heading {
     margin-top: 0;
     transform: none;
     text-align: center;
     width: 100%;
-  }
-  .about-me__title {
-    margin-top: 25px;
   }
   .about-me__description {
     max-width: 90%;
