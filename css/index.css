@@ -45,7 +45,7 @@ body {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 1.2em;
   font-weight: 400;
-  line-height: 1.65em;
+  line-height: 1.45em;
   color: #110a0a;
   background-color: #fafafa;
   text-align: left;
@@ -439,7 +439,7 @@ body {
 .table__correction {
   color: #757575;
   font-size: 0.9em;
-  word-spacing: 4px;
+  word-spacing: 2px;
 }
 .table__correction_attention {
   color: #e23a59;
@@ -865,7 +865,7 @@ body {
   transform: rotate(270deg);
   position: absolute;
   right: -191px;
-  top: 140px;
+  top: 142px;
   width: 332px;
   text-align: center;
   box-shadow: inset 0 24px 43px -23px #121428;
@@ -1336,12 +1336,12 @@ body {
 }
 .promo__description {
   font-size: 1.2em;
-  line-height: 1.6em;
+  line-height: 1.5em;
 }
 .promo__title {
   font-family: 'PT Serif', 'Times New Roman', serif;
   font-size: 2.3em;
-  line-height: 1.3em;
+  line-height: 1.2em;
   font-weight: 400;
   margin-top: 23px;
 }
@@ -1794,11 +1794,11 @@ body {
   content: '';
   width: 0;
   height: 0;
-  border: 19px solid transparent;
+  border: 17px solid transparent;
   border-left: 23px solid #e23a59;
   position: absolute;
   top: 0;
-  right: -42px;
+  right: -40px;
 }
 .video__heading {
   transform: rotate(-4deg);
@@ -2088,6 +2088,7 @@ body {
   padding: 0;
   list-style: none;
   font-size: 1em;
+  line-height: 1.8em;
   max-width: 312px;
   justify-content: space-between;
   -webkit-transition: background 0.2s linear;
