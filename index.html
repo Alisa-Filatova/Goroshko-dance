@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <header class="page-header" id="header">
+    <header class="page-header scroll-spy" id="header">
       
         <nav class="main-nav">
             
@@ -88,18 +88,60 @@
         >
         
         <div class="paginator">
-            <a href="#header" class="paginator__item paginator__item_active" title="Главная"></a>
-            <a href="#promo" class="paginator__item paginator__item" title="Промо"></a>
-            <a href="#about-me" class="paginator__item" title="Обо мне"></a>
-            <a href="#directions" class="paginator__item" title="Направления"></a>
-            <a href="#video" class="paginator__item" title="Постановки"></a>
-            <a href="#timetable" class="paginator__item" title="Расписание"></a>
-            <a href="#contacts" class="paginator__item" title="Контакты"></a>
+            <a
+                href="#header"
+                class="paginator__item paginator__item_active"
+                title="Главная"
+                data-id="header"
+            >
+            </a>
+            <a
+                href="#promo"
+                class="paginator__item"
+                title="Промо"
+                data-id="promo"
+            >
+            </a>
+            <a
+                href="#about-me"
+                class="paginator__item"
+                title="Обо мне"
+                data-id="about-me"
+            >
+            </a>
+            <a
+                href="#directions"
+                class="paginator__item"
+                title="Направления"
+                data-id="directions"
+            >
+            </a>
+            <a
+                href="#video"
+                class="paginator__item"
+                title="Постановки"
+                data-id="video"
+            >
+            </a>
+            <a
+                href="#timetable"
+                class="paginator__item"
+                title="Расписание"
+                data-id="timetable"
+            >
+            </a>
+            <a
+                href="#contacts"
+                class="paginator__item"
+                title="Контакты"
+                data-id="contacts"
+            >
+            </a>
         </div>
     </header> 
 
-    <section class="promo" id="promo">
-        <div class="promo__wrapper">
+    <section class="promo">
+        <div class="promo__wrapper scroll-spy" id="promo">
             <h1 class="promo__title">
                 Хотите научиться танцевать<br> грациозно и красиво?....
             </h1>
@@ -115,7 +157,7 @@
         </div>
     </section>
     
-    <section class="about-me" id="about-me">
+    <section class="about-me scroll-spy" id="about-me">
         <h2 class="page-heading about-me__heading">О хореографе</h2>
         <div class="about-me__wrapper">
             <div class="about-me__photo-wrapper">
@@ -163,7 +205,7 @@
         </div>
     </section>
     
-    <section class="directions cbp-so-scroller" id="directions">
+    <section class="directions cbp-so-scroller scroll-spy" id="directions">
         <h2 class="page-heading directions__heading">
             Основные направления
         </h2>
@@ -222,7 +264,7 @@
         </div>
     </section>
 
-    <section class="video" id="video">
+    <section class="video scroll-spy" id="video">
         
         <h2 class="page-heading video__heading">Мои постановки</h2>
         <a
@@ -294,7 +336,7 @@
         </video>
     </section>
     
-    <section class="timetable" id="timetable">
+    <section class="timetable scroll-spy" id="timetable">
         <h2 class="page-heading timetable__heading">Расписание занятий</h2>
         <table class="table">
             <tr class="table__heading">
@@ -457,7 +499,7 @@
         <div class="modal-overlay"></div>
     </section>
 
-    <section class="contacts" id="contacts">
+    <section class="contacts scroll-spy" id="contacts">
         <h2 class="page-heading contacts__heading">Адреса и контакты</h2>
         <div class="contacts__wrapper">
             <div class="contacts__items">
@@ -594,7 +636,8 @@
     <script src="js/modernizr.custom.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpScroller.js"></script>
-    <script src="js/index.js?7"></script>
+    <script src="js/scrollspy.js"></script>
+    <script src="js/index.js?8"></script>
     <script>
         (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44706532 = new Ya.Metrika({ id:44706532, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
     </script>

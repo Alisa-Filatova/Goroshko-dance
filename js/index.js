@@ -49,7 +49,9 @@ function scrollToAnchor(event) {
     $('html, body').animate({ scrollTop: scrollTop }, 700, 'swing');
 }
 
-$('.paginator__item').on('click', function() {
+var $paginatorItem = $('.paginator__item');
+
+$paginatorItem.on('click', function() {
     var classActive = 'paginator__item_active';
 
     $(this)
@@ -110,7 +112,29 @@ $('.alert__btn').on('click', function(event) {
     overlay.classList.remove('modal-overlay_show');
 });
 
+//Scroll-animation
 new cbpScroller( document.getElementById( 'directions' ) );
+
+
+//Scroll Spy
+var $section = $('.scroll-spy');
+
+$section.on('scrollSpy:enter', function() {
+    var sectionId = $(this).attr('id');
+    $paginatorItem.filter('[data-id="' + sectionId + '"]')
+        .addClass('paginator__item_active')
+        .siblings()
+        .removeClass('paginator__item_active');
+});
+
+$section.on('scrollSpy:exit', function() {
+    var sectionId = $(this).attr('id');
+    $paginatorItem
+        .filter('[data-id="' + sectionId + '"]')
+        .removeClass('paginator__item_active')
+});
+
+$section.scrollSpy();
 
 
 
