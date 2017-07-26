@@ -127,13 +127,6 @@ $section.on('scrollSpy:enter', function() {
         .removeClass('paginator__item_active');
 });
 
-$section.on('scrollSpy:exit', function() {
-    var sectionId = $(this).attr('id');
-    $paginatorItem
-        .filter('[data-id="' + sectionId + '"]')
-        .removeClass('paginator__item_active')
-});
-
 $section.scrollSpy();
 
 
