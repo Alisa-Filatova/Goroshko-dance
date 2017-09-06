@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 var nav = document.querySelector('.main-nav__items');
 var open = document.querySelector('.main-nav__menu-open');
 var close = document.querySelector('.close-btn');
@@ -112,22 +114,10 @@ $('.alert__btn').on('click', function(event) {
     overlay.classList.remove('modal-overlay_show');
 });
 
-//Scroll-animation
-new cbpScroller( document.getElementById( 'directions' ) );
 
 
-//Scroll Spy
-var $section = $('.scroll-spy');
 
-$section.on('scrollSpy:enter', function() {
-    var sectionId = $(this).attr('id');
-    $paginatorItem.filter('[data-id="' + sectionId + '"]')
-        .addClass('paginator__item_active')
-        .siblings()
-        .removeClass('paginator__item_active');
-});
 
-$section.scrollSpy();
 
 
 

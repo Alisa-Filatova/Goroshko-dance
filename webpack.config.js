@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
 var NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
@@ -21,6 +20,8 @@ module.exports = {
         publicPath: '/dist/',
         filename: 'js/[name].js'
     },
+
+    devtool: NODE_ENV === 'production' ? false : 'eval-source-map',
 
     module: {
         loaders: [
@@ -45,7 +46,10 @@ module.exports = {
                 // обрабатывать ссылки на картинки и помещать их в папку images
                 test: /\.(jpe?g|png|gif)\??.*$/,
                 loader: 'file-loader?name=images/[hash].[ext]',
-            },
+            }, {
+                test: /modernizr/,
+                loader: 'imports-loader?this=>window!exports-loader?window.Modernizr',
+            }
         ],
     },
 
