@@ -16,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/Alisa-Filatova/Goroshko-dance/issues"
   },
-  "homepage": "https://github.com/Alisa-Filatova/Goroshko-dance#readme"
+  "homepage": "https://github.com/Alisa-Filatova/Goroshko-dance#readme",
+  "dependencies": {
+    "build": "^0.1.4",
+    "classie": "^1.0.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "jquery": "^3.2.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^0.4.6"
+  }
 }

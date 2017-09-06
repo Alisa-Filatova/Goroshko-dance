@@ -1,3 +1,5 @@
+// import $ from 'jquery';
+
 /**
  * Extend jquery with a scrollspy plugin.
  * This watches the window scroll and fires events when elements are scrolled into viewport.
