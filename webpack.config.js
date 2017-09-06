@@ -21,6 +21,7 @@ module.exports = {
         filename: 'js/[name].js'
     },
 
+    // для того чтобы создавались sourceMap-файлы
     devtool: NODE_ENV === 'production' ? false : 'eval-source-map',
 
     module: {
@@ -47,6 +48,7 @@ module.exports = {
                 test: /\.(jpe?g|png|gif)\??.*$/,
                 loader: 'file-loader?name=images/[hash].[ext]',
             }, {
+                // этот кусок нужен только при использовании modernizr
                 test: /modernizr/,
                 loader: 'imports-loader?this=>window!exports-loader?window.Modernizr',
             }
