@@ -4,50 +4,39 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
-    // Корневая папка.
-    // __dirname - это константа, которая хранит абсолютный путь к файлу,
-    // в котором она используется
     context: __dirname,
 
     entry: {
-        // главный JS-файл для страницы index.html
         index: './js/index.js',
     },
 
-    // куда и как сохранять результаты сборки
     output: {
         path: __dirname + '/dist',
         publicPath: '/dist/',
         filename: 'js/[name].js'
     },
 
-    // для того чтобы создавались sourceMap-файлы
     devtool: NODE_ENV === 'production' ? false : 'eval-source-map',
 
     module: {
         loaders: [
             {
-                test: /\.css$/,
-
-                // обработка css-файлов с помощью css-loader
+                test: /\.(less|css)$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: `css-loader?${NODE_ENV === 'production' ? 'minimize' : ''}`,
+                    use: `css-loader?${NODE_ENV === 'production' ? 'minimize' : ''}!less-loader`,
                 }),
-            },
-            {
-                // обрабатывать ссылки на шрифты в css файлах и помещать их в папку fonts
+            }, {
                 test: /\.(ttf|eot|woff2?)\??.*$/,
                 loader: 'file-loader?name=fonts/[hash].[ext]',
             }, {
+                test: /\.(jpe?g|png|gif)\??.*$/,
+                loader: 'file-loader?name=img/[hash].[ext]',
+            },{
                 // обрабатывать ссылки на svg файлы и помещать их в папку svg
                 test: /\.svg\??.*$/,
                 loader: 'file-loader?name=svg/[hash].svg',
-            }, {
-                // обрабатывать ссылки на картинки и помещать их в папку images
-                test: /\.(jpe?g|png|gif)\??.*$/,
-                loader: 'file-loader?name=images/[hash].[ext]',
-            }, {
+            },{
                 // этот кусок нужен только при использовании modernizr
                 test: /modernizr/,
                 loader: 'imports-loader?this=>window!exports-loader?window.Modernizr',
@@ -56,14 +45,11 @@ module.exports = {
     },
 
     plugins: [
-        // нужно, чтобы импортируемые стили сохранялись
-        // в отдельных css-файлах, а не в js в виде строки
         new ExtractTextPlugin('css/[name].css'),
     ],
 };
 
 if (NODE_ENV === 'production') {
-    // при выполнении npm run build js-файлы будут сжаты
     var uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false,
@@ -73,3 +59,4 @@ if (NODE_ENV === 'production') {
 
     module.exports.plugins.push(uglifyJsPlugin);
 }
+

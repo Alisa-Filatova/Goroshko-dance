@@ -16,7 +16,7 @@
         content: '';
         height: 336px;
         width: 170px;
-        background: url('../img/circle-purple.svg') no-repeat;
+        background: url('../../img/circle-purple.svg') no-repeat;
         background-size: 100%;
         position: absolute;
         left: -25px;
@@ -24,8 +24,9 @@
 
     }
 
-    &_jazz-funk::after {
-        background-image: url('../img/circle-pink.svg');
+    &_jazz-funk::after,
+    &_stretching::after {
+        background-image: url('../../img/circle-pink.svg');
     }
 
     &__photo {
@@ -41,18 +42,25 @@
 
 
         &_contemporary {
-            background-image: url('../img/contemporary-desktop.jpg');
+            background-image: url('../../img/contemporary-desktop.jpg');
         }
 
-        &_bodyballet {
-            background-image: url('../img/bodyballet-desktop.jpg');
+        &_experimental {
+            background-image: url('../../img/experimental.jpg');
         }
 
         &_jazz-funk {
-           background-image: url('../img/jazzfunk-desktop.jpg');
+           background-image: url('../../img/jazzfunk-desktop.jpg');
            border-color: @pink;
            border-left: 15px solid @pink_dark;
            border-top: 15px solid @pink_dark;
+        }
+
+        &_stretching {
+            background-image: url('../../img/stretching.jpg');
+            border-color: @pink;
+            border-left: 15px solid @pink_dark;
+            border-top: 15px solid @pink_dark;
         }
     }
 
