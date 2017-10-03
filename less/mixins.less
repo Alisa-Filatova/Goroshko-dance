@@ -1,6 +1,5 @@
 @import 'variables';
 
-
 .container() {
     max-width: @screen_desktop;
     padding: 0 80px;
@@ -17,4 +16,26 @@
     @media (max-width: @screen_mobile) {
         padding: 0 10px;
     }
+}
+
+.alignment(@position, @width) {
+    position: @position;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: @width;
+    margin-left: -(@width / 2);
+}
+
+.transition(@property, @time, @type) {
+    -webkit-transition: @property  @time  @type;
+    -moz-transition: @property  @time  @type;
+    -o-transition: @property  @time  @type;
+    transition: @property  @time  @type;
+}
+
+.flex-wrapper(@direction, @justyfy-content, @wrap) {
+    display: flex;
+    flex-flow: @direction @wrap;
+    justify-content: @justyfy-content;
 }

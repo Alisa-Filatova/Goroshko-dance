@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'variables';
+@import 'mixins';
 
 * {
    -webkit-box-sizing: border-box;
@@ -9,12 +10,12 @@
 
 body {
     position: relative;
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: @additional-font;
     font-size: 1.2em;
     font-weight: 400;
     line-height: 1.45em;
-    color: #110a0a;
-    background-color: #fafafa;
+    color: @font-base-color;
+    background-color: @main-background-color;
     text-align: left;
     min-width: 320px;
     margin: 0 auto;
@@ -25,17 +26,12 @@ body {
 @media (max-width: @screen_tablet) {
     body {
         background-color: @white;
-    }
-}
-
-@media (max-width: @screen_tablet) {
-    body {
         line-height: 1.5em;
     }
 }
 
 .page-heading {
-    font-family: 'PT Serif', 'Times New Roman', serif;
+    font-family: @base-font;
     font-size: 2.3em;
     line-height: 1.3em;
     color: @white;
@@ -55,7 +51,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     color: @pink;
-    transition: opacity 0.3s linear;
+    .transition(opacity, 0.3s, linear);
 
     &:hover {
         opacity: 0.7;

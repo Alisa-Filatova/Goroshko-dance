@@ -1,4 +1,5 @@
 @import '../../variables';
+@import '../../mixins';
 
 .paginator {
     display: flex;
@@ -14,14 +15,11 @@
         border-radius: 50%;
         border: 2px solid @purple;
         opacity: 0.7;
-        cursor: pointer;
         margin-bottom: 15px;
         margin-left: -51px;
-        -webkit-transition: all 0.2s linear;
-        -moz-transition: all 0.2s linear;
-        -o-transition: all 0.2s linear;
-        transition: all 0.2s linear;
-        -webkit-transform: translateZ(0);
+        .transition(all, 0.2s, linear);
+        -webkit-transform: translateZ(0); //for Safari bug
+        cursor: pointer;
 
         &_active {
            background-color: @purple;

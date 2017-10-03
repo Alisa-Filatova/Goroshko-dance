@@ -3,19 +3,15 @@
 @import 'controls/input-text';
 @import 'controls/select';
 @import '../variables';
+@import '../mixins';
 @import 'overlay';
 
 .modal-post-form {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 50%;
-    width: @post-form-width;
-    margin-left: -(@post-form-width / 2);
+    .alignment(fixed, @post-form-width);
     border-top: 8px solid @purple;
     overflow: hidden;
     background-image: linear-gradient(180deg, @white 95%, @pink 37%);
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 30px 50px fade(@black, 70%);
     z-index: 2000;
     padding-bottom: 40px;
     display: none;
@@ -71,12 +67,12 @@
     & input[type="submit"] {
 
         &:disabled {
-            background-color: #757575;
-            color: rgba(255, 255, 255, 0.7);
+            background-color: @grey_darkest;
+            color: fade(@white, 70%);
 
             &:hover,
             &:active {
-                background-color: #757575;
+                background-color: @grey_darkest;
             }
         }
     }
@@ -112,7 +108,7 @@
         position: absolute;
         top: 73%;
         left: 55%;
-        background-image: linear-gradient(180deg, #ffffff 98%, #e23a59 20%);
+        background-image: linear-gradient(180deg, @white 98%, @pink 20%);
         animation: none;
 
         &__title {
@@ -135,5 +131,3 @@
         }
     }
 }
-
-

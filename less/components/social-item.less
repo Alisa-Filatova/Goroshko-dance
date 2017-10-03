@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins';
 
 .social-item {
 
@@ -15,7 +16,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70%;
-        transition: opacity 0.3s linear;
+        .transition(opacity, 0.3s, linear);
 
         &_vk {
             background-image: url('../../img/vk-white.svg');

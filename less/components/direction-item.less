@@ -1,9 +1,8 @@
 @import '../variables';
+@import '../mixins';
 
 .direction-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    .flex-wrapper(row, space-around, nowrap);
     align-items: center;
     margin-bottom: 20px;
     width: 100%;
@@ -86,23 +85,23 @@
         top: 142px;
         width: 332px;
         text-align: center;
-        box-shadow: inset 0 24px 43px -23px #121428;
-        color: rgba(255, 255, 255, 0.7);
+        box-shadow: inset 0 24px 43px -23px darken(@purple, 15%);
+        color: fade(@white, 70%);
         background-color: @purple;
 
         &:hover {
-            background-color: #1d2047;
+            background-color: darken(@purple, 5%);
             color: @white;
         }
 
         &:active {
             background-color: @purple_light;
-            color: rgba(255, 255, 255, 0.4);
+            color: fade(@white, 40%);
         }
 
         &_pink {
             background-color: @pink;
-            box-shadow: inset 0 24px 43px -23px #771f32;
+            box-shadow: inset 0 24px 43px -23px darken(@pink, 28%);
 
             &:hover {
                 background-color: @pink_dark;
