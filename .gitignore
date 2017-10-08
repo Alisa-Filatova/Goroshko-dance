@@ -1,2 +1,6 @@
 .idea
 node_modules
+
+# too large files
+video/sasha-goroshko-tnt.mp4
+video/sasha-goroshko-tnt.webm
