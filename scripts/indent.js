@@ -16,7 +16,7 @@ fs.readFile(htmlPath, 'utf8', (readError, html) => {
 
     const content = html
         .replace(/(<script type="text\/javascript" src="\/dist\/js\/index\.js\?[0-9\w]+"><\/script>)/, '\n    $1\n')
-        .replace(/(<link href="\/dist\/css\/index.css\?[0-9\w]+" rel="stylesheet">)/, '    $1\n');
+        .replace(/(<link href="\/dist\/css\/index\.css\?[0-9\w]+" rel="stylesheet">)/, '    $1\n');
 
     fs.writeFile(htmlPath, content, (writeError) => {
         if (writeError) {
