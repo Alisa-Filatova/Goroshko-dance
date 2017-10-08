@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var NODE_ENV = process.env.NODE_ENV;
 
@@ -32,11 +33,11 @@ module.exports = {
             }, {
                 test: /\.(jpe?g|png|gif)\??.*$/,
                 loader: 'file-loader?name=img/[hash].[ext]',
-            },{
+            }, {
                 // обрабатывать ссылки на svg файлы и помещать их в папку svg
                 test: /\.svg\??.*$/,
                 loader: 'file-loader?name=svg/[hash].svg',
-            },{
+            }, {
                 // этот кусок нужен только при использовании modernizr
                 test: /modernizr/,
                 loader: 'imports-loader?this=>window!exports-loader?window.Modernizr',
@@ -45,6 +46,12 @@ module.exports = {
     },
 
     plugins: [
+        new HtmlWebpackPlugin({
+            template: `${__dirname}/html/index.html`,
+            filename: `${__dirname}/index.html`,
+            hash: true,
+        }),
+
         new ExtractTextPlugin('css/[name].css'),
     ],
 };
