@@ -1,8 +1,8 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
     context: __dirname,
@@ -12,7 +12,7 @@ module.exports = {
     },
 
     output: {
-        path: __dirname + '/dist',
+        path: `${__dirname}/dist`,
         publicPath: '/dist/',
         filename: 'js/[name].js'
     },
@@ -66,4 +66,3 @@ if (NODE_ENV === 'production') {
 
     module.exports.plugins.push(uglifyJsPlugin);
 }
-
