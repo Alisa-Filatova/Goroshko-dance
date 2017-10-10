@@ -73,6 +73,14 @@ $('.direction-item__btn').on('click', function() {
     scrollToAnchor.apply(this, arguments);
 });
 
+$('.footer-nav__link').on('click', function() {
+    scrollToAnchor.apply(this, arguments);
+});
+
+$('.footer-nav__logo-link').on('click', function() {
+    scrollToAnchor.apply(this, arguments);
+});
+
 var form = document.querySelector('.modal-post-form > form');
 var $form = $(form);
 
