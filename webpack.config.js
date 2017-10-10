@@ -34,7 +34,6 @@ module.exports = {
                 test: /\.(jpe?g|png|gif)\??.*$/,
                 loader: 'file-loader?name=img/[hash].[ext]',
             }, {
-                // обрабатывать ссылки на svg файлы и помещать их в папку svg
                 test: /\.svg\??.*$/,
                 loader: 'file-loader?name=svg/[hash].svg',
             }, {
