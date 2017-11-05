@@ -1,5 +1,5 @@
-import '../css/normalize.css';
-import '../css/on-scroll.css';
+import '../less/normalize.less';
+import '../less/on-scroll.less';
 import '../less/index.less';
 import './modernizr.custom';
 import './cbpScroller';
