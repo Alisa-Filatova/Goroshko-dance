@@ -42,7 +42,10 @@ module.exports = {
                 use: {
                     loader: 'html-loader',
                     options: {
-                        attrs: ['video:poster'],
+                        attrs: [
+                            'img:src',
+                            'video:poster',
+                        ],
                     },
                 },
             },
