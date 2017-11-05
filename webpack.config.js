@@ -44,6 +44,7 @@ module.exports = {
                     options: {
                         attrs: [
                             'img:src',
+                            'link:href',
                             'video:poster',
                         ],
                     },
