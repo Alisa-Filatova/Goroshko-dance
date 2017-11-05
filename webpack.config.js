@@ -39,7 +39,12 @@ module.exports = {
                 loader: 'imports-loader?this=>window!exports-loader?window.Modernizr',
             }, {
                 test: /\.html$/,
-                loader: 'html-loader',
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: ['video:poster'],
+                    },
+                },
             },
         ],
     },
