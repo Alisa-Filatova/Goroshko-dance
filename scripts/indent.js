@@ -6,22 +6,17 @@
 const fs = require('fs');
 const path = require('path');
 
-const htmlPath = path.join(__dirname, '..', 'index.html');
+const DIST_PATH = path.join(__dirname, '..', 'dist');
 
-fs.readFile(htmlPath, 'utf8', (readError, html) => {
-    if (readError) {
-        console.error(readError.toString());
-        return;
-    }
+fs.readdirSync(DIST_PATH).forEach(filename => {
+    if (!/\.html$/.test(filename)) return;
+
+    const filePath = `${DIST_PATH}/${filename}`;
+    const html = fs.readFileSync(filePath, { encoding: 'utf8' });
 
     const content = html
-        .replace(/(<link href="\/dist\/css\/index\.css\?[0-9\w]+" rel="stylesheet">)/, '    $1\n')
-        .replace(/(<script type="text\/javascript" src="\/dist\/js\/index\.js\?[0-9\w]+"><\/script>)/, '\n    $1\n');
+        .replace(/(<link href="(?!(http|\/\/))[^"]+" rel="stylesheet">)/g, '    $1\n')
+        .replace(/(<script type="text\/javascript" src="(?!(http|\/\/))[^"]+"><\/script>)/g, '    $1\n');
 
-    fs.writeFile(htmlPath, content, (writeError) => {
-        if (writeError) {
-            console.error(writeError.toString());
-            return;
-        }
-    });
+    fs.writeFileSync(filePath, content);
 });
