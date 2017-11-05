@@ -13,8 +13,7 @@ module.exports = {
 
     output: {
         path: `${__dirname}/dist`,
-        publicPath: '/dist/',
-        filename: 'js/[name].js'
+        filename: 'js/[chunkhash].js',
     },
 
     devtool: NODE_ENV === 'production' ? false : 'eval-source-map',
@@ -24,35 +23,40 @@ module.exports = {
             {
                 test: /\.(less|css)$/,
                 loader: ExtractTextPlugin.extract({
+                    publicPath: '../',
                     fallback: 'style-loader',
                     use: `css-loader?${NODE_ENV === 'production' ? 'minimize' : ''}!less-loader`,
                 }),
             }, {
-                test: /\.(ttf|eot|woff2?)\??.*$/,
+                test: /\.(ttf|eot|woff2?)(\?.*)?$/,
                 loader: 'file-loader?name=fonts/[hash].[ext]',
             }, {
-                test: /\.(jpe?g|png|gif)\??.*$/,
+                test: /\.(jpe?g|png|gif|svg)(\?.*)?$/,
                 loader: 'file-loader?name=img/[hash].[ext]',
-            }, {
-                test: /\.svg\??.*$/,
-                loader: 'file-loader?name=svg/[hash].svg',
             }, {
                 // этот кусок нужен только при использовании modernizr
                 test: /modernizr/,
                 loader: 'imports-loader?this=>window!exports-loader?window.Modernizr',
-            }
+            }, {
+                test: /\.html$/,
+                loader: 'html-loader',
+            },
         ],
     },
 
     plugins: [
         new HtmlWebpackPlugin({
             template: `${__dirname}/html/index.html`,
-            filename: `${__dirname}/index.html`,
-            hash: true,
+            filename: `index.html`,
         }),
 
-        new ExtractTextPlugin('css/[name].css'),
+        new ExtractTextPlugin('css/[chunkhash].css'),
     ],
+
+    devServer: {
+        host: '0.0.0.0',
+        port: 8080,
+    }
 };
 
 if (NODE_ENV === 'production') {
