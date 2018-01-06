@@ -35,6 +35,7 @@ close.addEventListener('click', function(event) {
 //     overlay.classList.remove('modal-overlay_show');
 // });
 
+
 function scrollToAnchor(event) {
     event.preventDefault();
 
