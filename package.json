@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "ssh -i ~/.ssh/aws.pem aws sudo ./deploy.sh goroshkodance.ru",
+    "deploy": "ssh vds ./deploy.sh goroshkodance.ru",
     "devServer": "webpack-dev-server",
     "build": "rm -rf ./dist && NODE_ENV=production webpack && node ./scripts/indent.js"
   },
