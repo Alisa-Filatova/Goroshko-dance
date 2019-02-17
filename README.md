@@ -4,4 +4,4 @@
 
 goroshkodance.ru
 
-Copyright Alisa Filatova 2017 (alicedesign.site)
+Copyright Alisa Filatova 2019 (alicedesign.ru)
